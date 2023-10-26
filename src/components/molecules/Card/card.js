@@ -4,8 +4,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import ButtonOutlined from "@/components/atoms/Button/buttonOutlined";
 
-export default function MultiActionAreaCard() {
+const MultiActionAreaCard = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -26,10 +27,9 @@ export default function MultiActionAreaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+        <ButtonOutlined>Zapisz się!</ButtonOutlined>
       </CardActions>
     </Card>
   );
-}
+};
+export default MultiActionAreaCard;

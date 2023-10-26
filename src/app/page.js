@@ -1,5 +1,7 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import BasicButtons from "@/components/atoms/Button/button";
+import ButtonText from "@/components/atoms/Button/button";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -38,6 +40,7 @@ export default function Home() {
           priority
         />
       </div>
+      <ButtonText>Hello worldd</ButtonText>
 
       <div className={styles.grid}>
         <a
@@ -91,5 +94,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
