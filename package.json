@@ -1,0 +1,17 @@
+{
+  "name": "my-app-lsu",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "next": "14.0.0",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
