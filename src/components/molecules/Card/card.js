@@ -3,31 +3,36 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import ButtonOutlined from "src/components/atoms/Button/buttonOutlined";
+import { CardActionArea, CardActions } from "@mui/material";
+import Button from "src/components/atoms/Button";
 
-const MultiActionAreaCard = () => {
+const MultiActionAreaCard = ({
+  image,
+  title,
+  description,
+  onClick,
+  maxWidth,
+}) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: maxWidth }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={image}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ButtonOutlined />
+        <Button variant="outlined" text="Action" onClick={onClick} />
       </CardActions>
     </Card>
   );
