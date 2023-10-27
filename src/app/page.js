@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import ButtonText from "@/components/atoms/Button/button";
-import MultiActionAreaCard from "@/components/molecules/Card/card";
-import FormSection from "@/components/organisms/FormSection/formSection";
+import ButtonText from "src/components/atoms/Button/button";
+import MultiActionAreaCard from "src/components/molecules/Card/card";
+import FormSection from "src/components/organisms/FormSection/formSection";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import * as React from "react";
-import BasicTextField from "@/components/atoms/TextField/textField";
-import ValidationTextField from "@/components/atoms/TextField/Validation/validation";
+import BasicTextField from "src/components/atoms/TextField/textField";
+import ValidationTextField from "src/components/atoms/TextField/Validation/validation";
 
 const Form = () => {
   return (
