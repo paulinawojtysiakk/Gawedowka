@@ -27,7 +27,7 @@ const MultiActionAreaCard = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <ButtonOutlined>Zapisz się!</ButtonOutlined>
+        <ButtonOutlined />
       </CardActions>
     </Card>
   );

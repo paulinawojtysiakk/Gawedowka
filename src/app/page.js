@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import BasicButtons from "@/components/atoms/Button/button";
 import ButtonText from "@/components/atoms/Button/button";
+import MultiActionAreaCard from "@/components/molecules/Card/card";
+import FormSection from "@/components/organisms/FormSection/formSection";
 
 export default function Home() {
   return (
@@ -40,7 +41,9 @@ export default function Home() {
           priority
         />
       </div>
-      <ButtonText>Hello worldd</ButtonText>
+      <ButtonText />
+      <MultiActionAreaCard />
+      <FormSection />
 
       <div className={styles.grid}>
         <a
