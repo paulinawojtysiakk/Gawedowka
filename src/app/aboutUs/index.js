@@ -1,10 +1,10 @@
-import ButtonOutlined from "@/components/atoms/Button/buttonOutlined";
+import Button from "src/components/atoms/Button";
 import * as React from "react";
 
 const HomePage = () => {
   return (
     <>
-      <ButtonOutlined />
+      <Button />
     </>
   );
 };
