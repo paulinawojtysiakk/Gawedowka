@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const BasicTextField = ({ label, variant, id, defaultValue }) => {
+const BasicTextField = ({ variant, id, defaultValue, ...props }) => {
   return (
     <Box
       component="form"
@@ -14,9 +14,9 @@ const BasicTextField = ({ label, variant, id, defaultValue }) => {
     >
       <TextField
         id={id}
-        label={label}
         variant={variant}
         defaultValue={defaultValue}
+        {...props}
       />
     </Box>
   );

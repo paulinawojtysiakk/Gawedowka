@@ -1,5 +1,8 @@
 import React from "react";
-import CoursesList from "src/app/student/course/list.js";
+
+import CoursesList from "src/components/organisms/CoursesList";
+
+const courses = [{ level: "A1" }];
 
 const SignUpForm2 = () => {
   return <CoursesList />;
