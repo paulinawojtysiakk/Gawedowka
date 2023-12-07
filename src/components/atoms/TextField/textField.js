@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const BasicTextField = () => {
+const BasicTextField = ({ label, variant, id, defaultValue }) => {
   return (
     <Box
       component="form"
@@ -12,7 +12,12 @@ const BasicTextField = () => {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField
+        id={id}
+        label={label}
+        variant={variant}
+        defaultValue={defaultValue}
+      />
     </Box>
   );
 };
