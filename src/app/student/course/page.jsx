@@ -17,6 +17,11 @@ const steps = [
 
 const StudentCourseSignup = () => {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [ageGroup, setAgeGroup] = React.useState("");
+  const [level, setLevel] = React.useState("");
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -30,16 +35,31 @@ const StudentCourseSignup = () => {
     switch (activeStep) {
       case 0:
         return (
+
+  
           <CourseSignUpStudentDetails
             handleNext={handleNext}
             handleBack={handleBack}
             activeStep={activeStep}
+            name={name}
+            setName={setName}
+            email={email}
+            setEmail={setEmail}
+            phoneNumber={phoneNumber}
+            setPhoneNumber={setPhoneNumber}
+            ageGroup={ageGroup}
+            setAgeGroup={setAgeGroup}
+            level={level}
+            setLevel={setLevel}
           />
+       
         );
       case 1:
         return (
           <CourseSignUp
             handleNext={handleNext}
+            ageGroup={ageGroup}
+            level={level}
             handleBack={handleBack}
             activeStep={activeStep}
           />

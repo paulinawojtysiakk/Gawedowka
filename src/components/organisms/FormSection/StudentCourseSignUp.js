@@ -9,18 +9,25 @@ const CourseSignUpStudentDetails = ({
   activeStep,
   handleNext,
   handleBack,
+  name,
+  setName,
+  email,
+  setEmail,
+  phoneNumber,
+  setPhoneNumber,
+  ageGroup,
   setAgeGroup,
+  level,
+  setLevel,
 }) => {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [ageGroup, setAgeGroup] = React.useState("");
-
   const signUp = () => {
-    console.log("Post request do bazy danych", { name });
-    console.log("Post request do bazy danych", { email });
-    console.log("Post request do bazy danych", { phoneNumber });
-    console.log("Post request do bazy danych", { ageGroup });
+    console.log("Post request do bazy danych", {
+      name,
+      email,
+      phoneNumber,
+      ageGroup,
+    });
+
     setAgeGroup(ageGroup);
     handleNext();
   };
@@ -74,6 +81,21 @@ const CourseSignUpStudentDetails = ({
         value={ageGroup}
         onChange={(e) => {
           setAgeGroup(e.target.value);
+        }}
+      ></BasicSelect>
+
+      <BasicSelect
+        required
+        id="poziom-kursu"
+        label="Poziom"
+        text="Poziom"
+        option1={{ index: 0, text: "A1" }}
+        option2="A2"
+        option3="B1"
+        option4="B2"
+        value={level}
+        onChange={(e) => {
+          setLevel(e.target.value);
         }}
       ></BasicSelect>
 
