@@ -23,6 +23,8 @@ const StudentCourseSignup = () => {
   const [ageGroup, setAgeGroup] = React.useState("");
   const [level, setLevel] = React.useState("");
 
+  const [course, setCourse] = useState();
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
