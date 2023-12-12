@@ -37,10 +37,10 @@ const CourseSignupStepper = ({
             </Stepper>
             <Box sx={{ minHeight: "500px" }}>{renderForms(activeStep)}</Box>
             {/* <ProgressMobileStepper
-              activeStep={activeStep}
-              handleNext={handleNext}
-              handleBack={handleBack}
-            /> */}
+             activeStep={activeStep}
+             handleNext={handleNext}
+             handleBack={handleBack}
+           /> */}
           </Stack>
         </CardContent>
       </Card>
@@ -49,24 +49,3 @@ const CourseSignupStepper = ({
 };
 
 export default CourseSignupStepper;
-
-// const steps = [
-//   "Wpisz swoje dane",
-//   "Wybierz kurs na który chcesz się zapisać",
-//   "Potwierdź swoje dane i swój wybór",
-// ];
-
-// const CourseSignupStepper = () => {
-//   return (
-//     <Box sx={{ width: "100%" }}>
-//       <Stepper activeStep={1} alternativeLabel>
-//         {steps.map((label) => (
-//           <Step key={label}>
-//             <StepLabel>{label}</StepLabel>
-//           </Step>
-//         ))}
-//       </Stepper>
-//       <ProgressMobileStepper />
-//     </Box>
-//   );
-// };
