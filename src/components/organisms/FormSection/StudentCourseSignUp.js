@@ -2,7 +2,6 @@
 import * as React from "react";
 import BasicTextField from "src/components/atoms/TextField/textField";
 import BasicSelect from "src/components/atoms/Select";
-import Button from "@mui/material/Button";
 import ProgressMobileStepper from "src/components/organisms/stepperNav";
 
 const CourseSignUpStudentDetails = ({
@@ -17,8 +16,6 @@ const CourseSignUpStudentDetails = ({
   setPhoneNumber,
   ageGroup,
   setAgeGroup,
-  level,
-  setLevel,
 }) => {
   const signUp = () => {
     console.log("Post request do bazy danych", {
@@ -32,20 +29,8 @@ const CourseSignUpStudentDetails = ({
     handleNext();
   };
 
-  const getAgeGroup = () => {
-    if (ageGroup === "option1") {
-      return "6-9";
-    } else if (ageGroup === "option2") {
-      return "10-12";
-    } else if (ageGroup === "option3") {
-      return "13-18";
-    } else {
-      return "N/A";
-    }
-  };
-
   return (
-    <>
+    <div>
       <BasicTextField
         required
         id="outlined-required"
@@ -84,27 +69,12 @@ const CourseSignUpStudentDetails = ({
         }}
       ></BasicSelect>
 
-      <BasicSelect
-        required
-        id="poziom-kursu"
-        label="Poziom"
-        text="Poziom"
-        option1={{ index: 0, text: "A1" }}
-        option2="A2"
-        option3="B1"
-        option4="B2"
-        value={level}
-        onChange={(e) => {
-          setLevel(e.target.value);
-        }}
-      ></BasicSelect>
-
       <ProgressMobileStepper
         activeStep={activeStep}
         handleNext={signUp}
         handleBack={handleBack}
       />
-    </>
+    </div>
   );
 };
 

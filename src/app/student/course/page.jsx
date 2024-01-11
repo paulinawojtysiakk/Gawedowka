@@ -1,13 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "/src/app/page.module.css";
-import CourseSignupStepper from "src/components/organisms/stepper";
 import NavBar from "src/components/organisms/navBar";
 import CourseSignUpStudentDetails from "src/components/organisms/FormSection/StudentCourseSignup";
 import CourseSignUp from "src/components/organisms/FormSection/CourseSignUp";
 import SignUpSummary from "src/components/organisms/FormSection/SignUpSummary";
 import Wizard from "src/components/templates/wizzard";
-import CourseList from "src/components/organisms/FormSection/CourseChoices";
 
 const steps = [
   "Wpisz swoje dane",
@@ -21,9 +19,11 @@ const StudentCourseSignup = () => {
   const [email, setEmail] = React.useState("");
   const [phoneNumber, setPhoneNumber] = React.useState("");
   const [ageGroup, setAgeGroup] = React.useState("");
-  const [level, setLevel] = React.useState("");
+  const [selectedCourse, setSelectedCourse] = useState({});
 
-  const [course, setCourse] = useState();
+  const setCourse = (course) => {
+    setSelectedCourse(course);
+  };
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -37,8 +37,6 @@ const StudentCourseSignup = () => {
     switch (activeStep) {
       case 0:
         return (
-
-  
           <CourseSignUpStudentDetails
             handleNext={handleNext}
             handleBack={handleBack}
@@ -51,17 +49,14 @@ const StudentCourseSignup = () => {
             setPhoneNumber={setPhoneNumber}
             ageGroup={ageGroup}
             setAgeGroup={setAgeGroup}
-            level={level}
-            setLevel={setLevel}
           />
-       
         );
       case 1:
         return (
           <CourseSignUp
             handleNext={handleNext}
             ageGroup={ageGroup}
-            level={level}
+            setCourse={setCourse}
             handleBack={handleBack}
             activeStep={activeStep}
           />
@@ -72,6 +67,13 @@ const StudentCourseSignup = () => {
             handleNext={handleNext}
             handleBack={handleBack}
             activeStep={activeStep}
+            name={name}
+            email={email}
+            phoneNumber={phoneNumber}
+            ageGroup={ageGroup}
+            setCourse={setCourse}
+            selectedCourse={selectedCourse}
+            // kluczowy jest ten zapis do trzymania danych
           />
         );
     }
