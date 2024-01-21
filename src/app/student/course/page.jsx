@@ -6,6 +6,7 @@ import CourseSignUpStudentDetails from "src/components/organisms/FormSection/Stu
 import CourseSignUp from "src/components/organisms/FormSection/CourseSignUp";
 import SignUpSummary from "src/components/organisms/FormSection/SignUpSummary";
 import Wizard from "src/components/templates/wizzard";
+import Footer from "src/components/organisms/footer";
 
 const steps = [
   "Wpisz swoje dane",
@@ -90,6 +91,7 @@ const StudentCourseSignup = () => {
         handleBack={handleBack}
         activeStep={activeStep}
       />
+      <Footer />
     </div>
   );
 };

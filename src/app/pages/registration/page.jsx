@@ -5,25 +5,25 @@ import styled from "styled-components";
 import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 
-const ContactContainer = styled.div`
+const RegistrationContainer = styled.div`
   padding: 20px;
   margin: 100px;
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
-const Contact = () => {
+const RegistrationPage = () => {
   return (
     <Wrapper className={styles.main}>
       <NavBar />
-      <ContactContainer>
-        <div>Hello hi</div>
-      </ContactContainer>
+      <RegistrationContainer>
+        <div>Rejestracja</div>
+      </RegistrationContainer>
       <Footer />
     </Wrapper>
   );
 };
 
-export default Contact;
+export default RegistrationPage;

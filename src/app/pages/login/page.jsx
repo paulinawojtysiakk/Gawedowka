@@ -5,25 +5,25 @@ import styled from "styled-components";
 import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 
-const ContactContainer = styled.div`
+const LoginContainer = styled.div`
   padding: 20px;
   margin: 100px;
 `;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
-const Contact = () => {
+const LoginPage = () => {
   return (
     <Wrapper className={styles.main}>
       <NavBar />
-      <ContactContainer>
-        <div>Hello hi</div>
-      </ContactContainer>
+      <LoginContainer>
+        <div>Logowanie</div>
+      </LoginContainer>
       <Footer />
     </Wrapper>
   );
 };
 
-export default Contact;
+export default LoginPage;

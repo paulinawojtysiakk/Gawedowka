@@ -13,9 +13,10 @@ const CourseDetails = styled.p`
   }
 `;
 
-const CourseList = ({ ageGroup, setCourse }) => {
+const CourseList = ({ ageGroup, setCourse, handleNext }) => {
   const handleClick = (selectedCourse) => {
     setCourse(selectedCourse);
+    handleNext();
   };
 
   const courses = {
@@ -126,7 +127,6 @@ const CourseList = ({ ageGroup, setCourse }) => {
               onClick={() => handleClick(course)}
               value={course}
               variant="contained"
-              color="secondary"
               text="Zapisuję się!"
             />
           </StyledDiv>

@@ -33,10 +33,10 @@ const SignUpSummary = ({
 }) => {
   return (
     <Wrapper>
-      <h3>Dziękujemy za zapisanie się na kurs</h3>
+      <h3>Dziękujemy za zapisanie się na kurs.</h3>
       <DetailsSummary>
-        Twój plan lekcji pojawi się na Twoim profilu w zakładce Moje lekcje po
-        rozpoczęciu kursu
+        Twój plan lekcji pojawi się w zakładce 'Moje lekcje' w momencie
+        rozpoczęcia kursu.
       </DetailsSummary>
       <DetailsSummary>
         Podsumowanie Twojego zapisu:
@@ -44,14 +44,15 @@ const SignUpSummary = ({
         <p>Email: {email}</p>
         <p>Numer telefonu: {phoneNumber}</p>
         <p>Grupa wiekowa: {ageGroup}</p>
-        <p>Kurs na który jesteś zapisany: {selectedCourse.name}</p>
+        <p>
+          Kurs na który jesteś zapisany: <b>{selectedCourse.name}</b>
+        </p>
+        <ProgressMobileStepper
+          activeStep={activeStep}
+          handleNext={handleNext}
+          handleBack={handleBack}
+        />
       </DetailsSummary>
-
-      <ProgressMobileStepper
-        activeStep={activeStep}
-        handleNext={handleNext}
-        handleBack={handleBack}
-      />
     </Wrapper>
   );
 };

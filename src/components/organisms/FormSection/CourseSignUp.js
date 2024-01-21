@@ -12,7 +12,11 @@ const CourseSignUp = ({
 }) => {
   return (
     <>
-      <CourseList ageGroup={ageGroup} setCourse={setCourse} />
+      <CourseList
+        ageGroup={ageGroup}
+        setCourse={setCourse}
+        handleNext={handleNext}
+      />
 
       <ProgressMobileStepper
         activeStep={activeStep}

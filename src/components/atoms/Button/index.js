@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { PropaneSharp } from "@mui/icons-material";
 
 const ButtonText = ({ variant, text, color, ...props }) => (
   <Button variant={variant} color={color} {...props}>

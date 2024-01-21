@@ -6,13 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
 import Button from "src/components/atoms/Button";
 
-const MultiActionAreaCard = ({
-  image,
-  title,
-  description,
-  onClick,
-  maxWidth,
-}) => {
+const BasicCard = ({ image, title, description, onClick, maxWidth }) => {
   return (
     <Card sx={{ maxWidth: maxWidth }}>
       <CardActionArea>
@@ -37,4 +31,4 @@ const MultiActionAreaCard = ({
     </Card>
   );
 };
-export default MultiActionAreaCard;
+export default BasicCard;
