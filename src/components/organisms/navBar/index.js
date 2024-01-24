@@ -71,6 +71,9 @@ const NavBar = () => {
           <NavElement>
             <Link href="/pages/contact">Kontakt</Link>
           </NavElement>
+          <NavElement>
+            <Link href="/student/profile">Mój profil</Link>
+          </NavElement>
 
           <SignupButton
             variant="contained"

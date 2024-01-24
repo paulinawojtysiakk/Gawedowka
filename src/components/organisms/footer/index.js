@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 import Logo from "public/images/images.png";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 const FooterContainer = styled.div`
   background-color: #fffff9;
@@ -69,6 +70,7 @@ const Footer = () => {
               href="https://www.facebook.com/learn.french.school/"
               target="_blank"
             >
+              <FacebookIcon />
               Odwiedź nasz fanpage
             </Link>
           </FooterElement>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
+import ButtonText from "src/components/atoms/Button";
 
 const Wrapper = styled.div`
   padding: 10px 30px;
@@ -29,6 +30,10 @@ const DetailsContainer = styled.ul`
 const CourseEl = styled.li`
   list-style: none;
   padding: 10px 0;
+`;
+const SignupButton = styled(ButtonText)`
+  margin: 20px 10px;
+  background-color: #79c2d0;
 `;
 
 const ListOfCourses = [
@@ -76,8 +81,12 @@ const CourseItem = ({ course }) => (
         <CourseEl>Zajęcia odbywają się dwa razy w tygodniu.</CourseEl>
       </DetailsContainer>
     </ImageContainer>
-
     <CourseEl style={{ marginTop: "10px" }}>{course.description}</CourseEl>
+    <SignupButton
+      variant="contained"
+      text="Zapisuję się!"
+      href="/pages/login"
+    />
   </CoursesBox>
 );
 

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import styles from "./page.module.css";
 import NavBar from "src/components/organisms/navBar";
@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <Wrapper className={styles.main}>
       <NavBar />
+
       <Footer />
     </Wrapper>
   );
