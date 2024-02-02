@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ProgressMobileStepper from "src/components/organisms/stepperNav";
 import CourseList from "src/components/organisms/FormSection/CourseChoices";

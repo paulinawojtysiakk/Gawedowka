@@ -32,23 +32,17 @@ const RegButton = styled(ButtonText)`
 `;
 
 const Login = () => {
-  if (typeof window !== "undefined") {
-    const retrievedValue = JSON.parse(localStorage.getItem("email"));
-    console.log(retrievedValue);
-  }
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(localStorage.getItem("email"));
   const [password, setPassword] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("userToken", JSON.stringify(`${email}${password}`));
     console.log(email, password);
   };
 
-  useEffect(() => {
-    localStorage.setItem("email", JSON.stringify(email));
-  }, [email]);
-
-  // localStorage.setItem("userToken", "TokenValue");
 
   return (
     <Wrapper className={styles.main}>

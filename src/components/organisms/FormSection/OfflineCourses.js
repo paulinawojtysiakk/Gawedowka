@@ -31,13 +31,13 @@ const OfflineCourse = ({ activeStep, handleNext, handleBack }) => {
           Żelaznej. Wpisz się na listę według poziomu, a my prześlemy Ci
           propozycję kursu mailowo.
         </Description>
-        <p style={{ minWidth: "300px" }}>
+        <div style={{ minWidth: "300px" }}>
           <ProgressMobileStepper
             activeStep={activeStep}
             handleNext={handleNext}
             handleBack={handleBack}
           />
-        </p>
+        </div>
       </Wrapper>
     </>
   );

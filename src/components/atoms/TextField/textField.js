@@ -5,12 +5,12 @@ import TextField from "@mui/material/TextField";
 const BasicTextField = ({ variant, id, defaultValue, ...props }) => {
   return (
     <Box
-      component="form"
+      // component="form"
       sx={{
         "& > :not(style)": { m: 1, width: "25ch" },
       }}
-      noValidate
-      autoComplete="off"
+      // noValidate
+      // autoComplete="off"
     >
       <TextField
         id={id}
