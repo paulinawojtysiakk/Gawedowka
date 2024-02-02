@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import styles from "./page.module.css";
 import NavBar from "src/components/organisms/navBar";

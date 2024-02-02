@@ -32,7 +32,7 @@ const LoginButton = styled(ButtonText)`
   border-color: #f9f6f0;
 `;
 
-const Register = ({ onFormSwitch }) => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -47,7 +47,7 @@ const Register = ({ onFormSwitch }) => {
       <NavBar />
       <RegistrationContainer>
         <p>Tutaj możesz założyć konto:</p>
-        <Form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <BasicTextField
             required
             label="Imię i nazwisko"
@@ -68,12 +68,12 @@ const Register = ({ onFormSwitch }) => {
           ></BasicTextField>
           <p>Akceptuję regulamin</p>
           <Button text="Zarejestruj się" variant="contained" type="submit" />
-        </Form>
+        </form>
         <p>Masz już konto?</p>
         <LoginButton
           text="Zaloguj się"
           variant="outlined"
-          onClick={() => onFormSwitch("login")}
+          href="/pages/login"
         ></LoginButton>
       </RegistrationContainer>
       <Footer />

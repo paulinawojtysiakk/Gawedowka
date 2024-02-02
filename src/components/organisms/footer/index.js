@@ -38,7 +38,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <LogoContainer>
-        <Image src={Logo} alt="Logo" height={100} />
+        <Image src={Logo} alt="Logo" height={100} priority="false" />
       </LogoContainer>
       <TextContainer>
         <FooterColumn>

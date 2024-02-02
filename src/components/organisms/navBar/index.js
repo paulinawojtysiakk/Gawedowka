@@ -53,11 +53,11 @@ const NavBar = () => {
       <NavLogo>
         <NavElement>
           <Link href="/">
-            <Image src={Logo} alt="Logo" height={100} />
+            <Image src={Logo} alt="Logo" height={100} priority="false" />
           </Link>
         </NavElement>
         <Link href="/student/course">
-          <CourseSignup variant="contained" text="Zapisz się na kurs" />
+          <CourseSignup variant="contained" text="Kursy stacjonarne" />
         </Link>
       </NavLogo>
       <div>
@@ -66,7 +66,7 @@ const NavBar = () => {
             <Link href="/pages/about">O nas</Link>
           </NavElement>
           <NavElement>
-            <Link href="/pages/courses">Kursy</Link>
+            <Link href="/pages/courses">Kursy online</Link>
           </NavElement>
           <NavElement>
             <Link href="/pages/contact">Kontakt</Link>

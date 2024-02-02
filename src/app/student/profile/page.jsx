@@ -12,15 +12,13 @@ const StudentPage = () => {
 
   return (
     <>
-      <p>Student Page</p>
-      {currentForm === "login" ? (
+      {/* {currentForm === "login" ? (
         <LoginPage onFormSwitch={toggleForm} />
       ) : (
         <RegistrationPage onFormSwitch={toggleForm} />
-      )}
-
-      <button onClick={() => setCurrentForm("login")}>Login</button>
-      <button onClick={() => setCurrentForm("registration")}>Register</button>
+      )} */}
+      <LoginPage />
+      <p>Student Page</p>
     </>
   );
 };

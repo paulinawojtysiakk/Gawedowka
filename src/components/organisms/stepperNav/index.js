@@ -11,12 +11,12 @@ const ProgressMobileStepper = ({ activeStep, handleNext, handleBack }) => {
   return (
     <MobileStepper
       variant="progress"
-      steps={3}
+      steps={4}
       position="static"
       activeStep={activeStep}
       sx={{ maxWidth: 400, flexGrow: 1 }}
       nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep === 2}>
+        <Button size="small" onClick={handleNext} disabled={activeStep === 3}>
           Next
           {theme.direction === "rtl" ? (
             <KeyboardArrowLeft />

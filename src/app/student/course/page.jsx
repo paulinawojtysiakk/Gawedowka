@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 import styles from "/src/app/page.module.css";
 import NavBar from "src/components/organisms/navBar";
-import CourseSignUpStudentDetails from "src/components/organisms/FormSection/StudentCourseSignup";
-import CourseSignUp from "src/components/organisms/FormSection/CourseSignUp";
-import SignUpSummary from "src/components/organisms/FormSection/SignUpSummary";
+import OfflineCourse from "src/components/organisms/formSection/OfflineCourses";
+import CourseSignUpStudentDetails from "src/components/organisms/formSection/StudentCourseSignup";
+import CourseSignUp from "src/components/organisms/formSection/CourseSignUp";
+import SignUpSummary from "src/components/organisms/formSection/SignUpSummary";
 import Wizard from "src/components/templates/wizzard";
 import Footer from "src/components/organisms/footer";
 
 const steps = [
+  "Kursy stacjonarne",
   "Wpisz swoje dane",
   "Wybierz kurs na który chcesz się zapisać",
   "Potwierdź swoje dane i swój wybór",
@@ -38,6 +40,14 @@ const StudentCourseSignup = () => {
     switch (activeStep) {
       case 0:
         return (
+          <OfflineCourse
+            handleNext={handleNext}
+            handleBack={handleBack}
+            activeStep={activeStep}
+          />
+        );
+      case 1:
+        return (
           <CourseSignUpStudentDetails
             handleNext={handleNext}
             handleBack={handleBack}
@@ -52,7 +62,7 @@ const StudentCourseSignup = () => {
             setAgeGroup={setAgeGroup}
           />
         );
-      case 1:
+      case 2:
         return (
           <CourseSignUp
             handleNext={handleNext}
@@ -62,7 +72,7 @@ const StudentCourseSignup = () => {
             activeStep={activeStep}
           />
         );
-      case 2:
+      case 3:
         return (
           <SignUpSummary
             handleNext={handleNext}

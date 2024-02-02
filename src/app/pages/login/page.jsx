@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "src/app/page.module.css";
 import styled from "styled-components";
 import NavBar from "src/components/organisms/navBar";
@@ -18,29 +18,37 @@ const LoginContainer = styled.div`
   margin: 100px;
   text-align: center;
 `;
-
 const Form = styled.form`
   margin: 30px 0 80px 0;
 `;
-
 const Button = styled(ButtonText)`
   margin: 10px;
   background-color: #53a8b6;
 `;
-
 const RegButton = styled(ButtonText)`
   margin: 10px;
   color: lightblue;
   border-color: #f9f6f0;
 `;
 
-const Login = ({ onFormSwitch }) => {
+const Login = () => {
+  if (typeof window !== "undefined") {
+    const retrievedValue = JSON.parse(localStorage.getItem("email"));
+    console.log(retrievedValue);
+  }
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, password);
   };
+
+  useEffect(() => {
+    localStorage.setItem("email", JSON.stringify(email));
+  }, [email]);
+
+  // localStorage.setItem("userToken", "TokenValue");
 
   return (
     <Wrapper className={styles.main}>
@@ -66,7 +74,7 @@ const Login = ({ onFormSwitch }) => {
         <RegButton
           text="Zarejestruj się"
           variant="outlined"
-          onClick={() => onFormSwitch("registration")}
+          href="/pages/registration"
         ></RegButton>
       </LoginContainer>
       <Footer />
