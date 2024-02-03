@@ -6,16 +6,20 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
 import Button from "src/components/atoms/Button";
 
-const BasicCard = ({ image, title, description, onClick, maxWidth }) => {
+const BasicCard = ({
+  src,
+  imgWidth,
+  title,
+  description,
+  onClick,
+  maxWidth,
+  maxHeight,
+  buttonText,
+}) => {
   return (
-    <Card sx={{ maxWidth: maxWidth }}>
+    <Card sx={{ maxWidth: maxWidth, maxHeight: maxHeight }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image}
-          alt="green iguana"
-        />
+        <CardMedia component="img" max-width={imgWidth} src={src} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
@@ -26,7 +30,7 @@ const BasicCard = ({ image, title, description, onClick, maxWidth }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button variant="outlined" text="Action" onClick={onClick} />
+        <Button variant="outlined" text={buttonText} onClick={onClick} />
       </CardActions>
     </Card>
   );

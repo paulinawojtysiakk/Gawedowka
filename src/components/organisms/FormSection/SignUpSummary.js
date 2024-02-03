@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     margin: 20px;
   }
 `;
-const DetailsSummary = styled.p`
+const DetailsSummary = styled.div`
   padding: 15px;
 
   p {

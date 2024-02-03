@@ -9,13 +9,14 @@ import Logo from "public/images/images.png";
 const NavBarContainer = styled.div`
   background-color: #fffff9;
   padding: 10px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
   border-radius: 5px;
+  position: sticky;
 `;
 const NavLogo = styled.div`
   display: flex;
@@ -23,7 +24,6 @@ const NavLogo = styled.div`
   align-items: center;
   list-style: none;
 `;
-
 const NavList = styled.ul`
   list-style: none;
   display: flex;
@@ -32,16 +32,13 @@ const NavList = styled.ul`
   flex-wrap: wrap;
   margin: 0 20px;
 `;
-
 const NavElement = styled.li`
   margin: 0 20px;
 `;
-
 const SignupButton = styled(ButtonText)`
   margin-left: 10px;
   background-color: #53a8b6;
 `;
-
 const CourseSignup = styled(ButtonText)`
   margin-right: 40px;
   background-color: #53a8b6;

@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 80px 0;
 `;
-
 const Description = styled.div`
   max-width: 700px;
   padding: 30px 0;

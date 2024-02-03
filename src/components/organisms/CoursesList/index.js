@@ -9,11 +9,9 @@ import BasicAlert from "src/components/atoms/Alert";
 const Wrapper = styled.div`
   padding: 10px 30px;
 `;
-
 const CoursesTitle = styled.h2`
   padding-bottom: 40px;
 `;
-
 const CoursesBox = styled.ul`
   max-width: 1000px;
   text-align: justify;
@@ -22,14 +20,12 @@ const CoursesBox = styled.ul`
   border-radius: 5px;
   background-color: white;
 `;
-
 const ImageContainer = styled.div`
   display: flex;
 `;
 const DetailsContainer = styled.ul`
   padding: 0 20px;
 `;
-
 const CourseEl = styled.li`
   list-style: none;
   padding: 10px 0;

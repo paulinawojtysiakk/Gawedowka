@@ -32,7 +32,6 @@ const RegButton = styled(ButtonText)`
 `;
 
 const Login = () => {
-
   const [email, setEmail] = useState(localStorage.getItem("email"));
   const [password, setPassword] = useState("");
 
@@ -42,7 +41,6 @@ const Login = () => {
     localStorage.setItem("userToken", JSON.stringify(`${email}${password}`));
     console.log(email, password);
   };
-
 
   return (
     <Wrapper className={styles.main}>
