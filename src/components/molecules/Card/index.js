@@ -13,11 +13,10 @@ const BasicCard = ({
   description,
   onClick,
   maxWidth,
-  maxHeight,
   buttonText,
 }) => {
   return (
-    <Card sx={{ maxWidth: maxWidth, maxHeight: maxHeight }}>
+    <Card sx={{ maxWidth: maxWidth }}>
       <CardActionArea>
         <CardMedia component="img" max-width={imgWidth} src={src} />
         <CardContent>
@@ -29,7 +28,7 @@ const BasicCard = ({
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions sx={{ justifyContent: "center", margin: "10px 0" }}>
         <Button variant="outlined" text={buttonText} onClick={onClick} />
       </CardActions>
     </Card>

@@ -20,11 +20,12 @@ const Wrapper = styled.div`
 const IntroContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 `;
 
 const Introduction = styled.div`
   margin: 50px;
-  max-width: 700px;
+  max-width: 600px;
   text-align: justify;
   line-height: 2;
 `;
@@ -46,29 +47,30 @@ const Home = () => {
           <Image
             src={Bonjour}
             alt="bonjour"
-            height="350"
+            height="380"
             style={{ borderRadius: "5px" }}
           ></Image>
           <Introduction>
-            <h3>Lorem ipsum lorem lorem</h3>
+            <h1>Język francuski to nasza pasja</h1>
             <p>
-              Darmowa platforma do nauki języka polskiego dla ukraińskich
-              uczniów. Nasi nauczyciele podczas grupowych lekcji online szybko i
-              w praktyczny sposób nauczą Cię używać języka polskiego w
-              codziennych sytuacjach. Darmowa platforma do nauki języka
-              polskiego dla ukraińskich uczniów. Nasi nauczyciele podczas
-              grupowych lekcji online szybko i w praktyczny sposób nauczą Cię
-              używać języka polskiego w codziennych sytuacjach.
+              Ogólny kurs francuskiego w Learn French to najczęściej kilkuletni
+              cykl nauki prowadzący od poziomu początkującego A1 do poziomu
+              biegłości językowej C1/C2. Jeden poziom zaawansowania realizowany
+              jest przez 2 semestry nauki. Nasze programy nauczania języka
+              francuskiego realizujemy z wykorzystaniem serii podręczników
+              opracowanych we Francji przez wydawnictwo Hachette. Po każdym
+              etapie nasi Słuchacze mogą przystępować do międzynarodowych
+              egzaminów DELF (A1-B2) i DALF (C1, C2).
             </p>
           </Introduction>
         </IntroContainer>
-        <OurOffer />
         <ImageContainerDets>
           <p>
             Lorem ipsum lorem lorem Lorem ipsum lorem lorem Lorem ipsum lorem
           </p>
           <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
         </ImageContainerDets>
+        <OurOffer />
       </Wrapper>
       <Footer />
     </>

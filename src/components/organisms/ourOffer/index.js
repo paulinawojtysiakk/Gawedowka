@@ -18,6 +18,7 @@ const CardWrapper = styled.li`
   padding: 15px;
   max-width: 300px;
   height: 500px;
+  text-align: justify;
 `;
 
 const OurOffer = () => {
@@ -43,7 +44,7 @@ const OurOffer = () => {
         <CardWrapper>
           <BasicCard
             title="Oferta B2B"
-            description="Jeśli jesteś zainteresowany naszą ofertą B2B, kliknij tutaj aby dowiedzieć się więcej."
+            description="Jeśli jesteś zainteresowany naszą ofertą B2B, kliknij tutaj aby dowiedzieć się więcej szczegółowych informacji."
             src="/images/logo.jpeg"
             buttonText="Wybierz ofertę"
           ></BasicCard>
