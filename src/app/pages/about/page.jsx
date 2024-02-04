@@ -6,15 +6,18 @@ import Footer from "src/components/organisms/footer";
 
 const About = () => {
   return (
-    <div className={styles.main}>
+    <>
       <NavBar />
-      <h1>First Post</h1>
-      <div>Hello</div>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+
+      <div className={styles.main}>
+        <h1>First Post</h1>
+        <div>Hello</div>
+        <h2>
+          <Link href="/">Back to home</Link>
+        </h2>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

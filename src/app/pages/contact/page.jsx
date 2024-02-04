@@ -7,7 +7,7 @@ import Footer from "src/components/organisms/footer";
 
 const ContactContainer = styled.div`
   padding: 20px;
-  margin: 100px;
+  margin-top: 150px;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -16,13 +16,15 @@ const Wrapper = styled.div`
 `;
 const Contact = () => {
   return (
-    <Wrapper className={styles.main}>
+    <>
       <NavBar />
-      <ContactContainer>
-        <div>Hello hi</div>
-      </ContactContainer>
+      <Wrapper className={styles.main}>
+        <ContactContainer>
+          <div>Hello hi</div>
+        </ContactContainer>
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

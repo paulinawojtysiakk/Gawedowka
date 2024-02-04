@@ -20,7 +20,7 @@ const RegistrationContainer = styled.div`
 `;
 
 const Form = styled.form`
-  margin: 30px 0 80px 0;
+  margin: 10px 0 50px 0;
 `;
 
 const Button = styled(ButtonText)`
@@ -30,6 +30,10 @@ const Button = styled(ButtonText)`
 const LoginButton = styled(ButtonText)`
   color: lightblue;
   border-color: #f9f6f0;
+`;
+
+const Text = styled.p`
+  margin: 10px;
 `;
 
 const Register = () => {
@@ -43,41 +47,43 @@ const Register = () => {
   };
 
   return (
-    <Wrapper className={styles.main}>
+    <>
       <NavBar />
-      <RegistrationContainer>
-        <p>Tutaj możesz założyć konto:</p>
-        <form onSubmit={handleSubmit}>
-          <BasicTextField
-            required
-            label="Imię i nazwisko"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></BasicTextField>
-          <BasicTextField
-            required
-            label="Twój email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></BasicTextField>
-          <BasicTextField
-            required
-            label="Hasło"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></BasicTextField>
-          <p>Akceptuję regulamin</p>
-          <Button text="Zarejestruj się" variant="contained" type="submit" />
-        </form>
-        <p>Masz już konto?</p>
-        <LoginButton
-          text="Zaloguj się"
-          variant="outlined"
-          href="/pages/login"
-        ></LoginButton>
-      </RegistrationContainer>
+      <Wrapper className={styles.main}>
+        <RegistrationContainer>
+          <Text>Tutaj możesz założyć konto:</Text>
+          <Form onSubmit={handleSubmit}>
+            <BasicTextField
+              required
+              label="Imię i nazwisko"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            ></BasicTextField>
+            <BasicTextField
+              required
+              label="Twój email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></BasicTextField>
+            <BasicTextField
+              required
+              label="Hasło"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></BasicTextField>
+            <Text>Akceptuję regulamin</Text>
+            <Button text="Zarejestruj się" variant="contained" type="submit" />
+          </Form>
+          <Text>Masz już konto?</Text>
+          <LoginButton
+            text="Zaloguj się"
+            variant="outlined"
+            href="/pages/login"
+          ></LoginButton>
+        </RegistrationContainer>
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

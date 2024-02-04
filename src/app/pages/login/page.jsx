@@ -19,16 +19,19 @@ const LoginContainer = styled.div`
   text-align: center;
 `;
 const Form = styled.form`
-  margin: 30px 0 80px 0;
+  margin: 20px 0 60px 0;
 `;
 const Button = styled(ButtonText)`
-  margin: 10px;
+  margin: 30px;
   background-color: #53a8b6;
 `;
 const RegButton = styled(ButtonText)`
-  margin: 10px;
+  margin: 20px;
   color: lightblue;
   border-color: #f9f6f0;
+`;
+const Text = styled.p`
+  margin-bottom: 10px;
 `;
 
 const Login = () => {
@@ -43,34 +46,36 @@ const Login = () => {
   };
 
   return (
-    <Wrapper className={styles.main}>
+    <>
       <NavBar />
-      <LoginContainer>
-        <p>Zaloguj się do swojego konta</p>
-        <Form onSubmit={handleSubmit}>
-          <BasicTextField
-            required
-            label="Twój email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></BasicTextField>
-          <BasicTextField
-            required
-            label="Hasło"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          ></BasicTextField>
-          <Button text="Zaloguj się" variant="contained" type="submit" />
-        </Form>
-        <p>Nie masz swojego konta?</p>
-        <RegButton
-          text="Zarejestruj się"
-          variant="outlined"
-          href="/pages/registration"
-        ></RegButton>
-      </LoginContainer>
+      <Wrapper className={styles.main}>
+        <LoginContainer>
+          <Text>Zaloguj się do swojego konta</Text>
+          <Form onSubmit={handleSubmit}>
+            <BasicTextField
+              required
+              label="Twój email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></BasicTextField>
+            <BasicTextField
+              required
+              label="Hasło"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></BasicTextField>
+            <Button text="Zaloguj się" variant="contained" type="submit" />
+          </Form>
+          <Text>Nie masz swojego konta?</Text>
+          <RegButton
+            text="Zarejestruj się"
+            variant="outlined"
+            href="/pages/registration"
+          />
+        </LoginContainer>
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

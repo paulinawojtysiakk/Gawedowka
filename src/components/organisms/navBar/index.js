@@ -6,17 +6,20 @@ import ButtonText from "src/components/atoms/Button";
 import Image from "next/image";
 import Logo from "public/images/images.png";
 
+const Wrapper = styled.div`
+  margin-bottom: 180px;
+`;
+
 const NavBarContainer = styled.div`
   background-color: #fffff9;
   padding: 10px;
-  // margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  border-radius: 5px;
-  position: sticky;
+  position: fixed;
+  z-index: 10;
 `;
 const NavLogo = styled.div`
   display: flex;
@@ -34,6 +37,12 @@ const NavList = styled.ul`
 `;
 const NavElement = styled.li`
   margin: 0 20px;
+  &:hover {
+    // transition-delay: 0.1s;
+    color: #5072a7;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+  }
 `;
 const SignupButton = styled(ButtonText)`
   margin-left: 10px;
@@ -46,45 +55,47 @@ const CourseSignup = styled(ButtonText)`
 
 const NavBar = () => {
   return (
-    <NavBarContainer>
-      <NavLogo>
-        <NavElement>
-          <Link href="/">
-            <Image src={Logo} alt="Logo" height={100} priority="false" />
+    <Wrapper>
+      <NavBarContainer>
+        <NavLogo>
+          <NavElement>
+            <Link href="/">
+              <Image src={Logo} alt="Logo" height={100} priority="false" />
+            </Link>
+          </NavElement>
+          <Link href="/student/course">
+            <CourseSignup variant="contained" text="Kursy stacjonarne" />
           </Link>
-        </NavElement>
-        <Link href="/student/course">
-          <CourseSignup variant="contained" text="Kursy stacjonarne" />
-        </Link>
-      </NavLogo>
-      <div>
-        <NavList>
-          <NavElement>
-            <Link href="/pages/about">O nas</Link>
-          </NavElement>
-          <NavElement>
-            <Link href="/pages/courses">Kursy online</Link>
-          </NavElement>
-          <NavElement>
-            <Link href="/pages/contact">Kontakt</Link>
-          </NavElement>
-          <NavElement>
-            <Link href="/student/profile">Mój profil</Link>
-          </NavElement>
+        </NavLogo>
+        <div>
+          <NavList>
+            <NavElement>
+              <Link href="/pages/about">O nas</Link>
+            </NavElement>
+            <NavElement>
+              <Link href="/pages/courses">Kursy online</Link>
+            </NavElement>
+            <NavElement>
+              <Link href="/pages/contact">Kontakt</Link>
+            </NavElement>
+            <NavElement>
+              <Link href="/student/profile">Mój profil</Link>
+            </NavElement>
 
-          <SignupButton
-            variant="contained"
-            text="Logowanie"
-            href="/pages/login"
-          ></SignupButton>
-          <SignupButton
-            variant="contained"
-            text="Rejestracja"
-            href="/pages/registration"
-          ></SignupButton>
-        </NavList>
-      </div>
-    </NavBarContainer>
+            <SignupButton
+              variant="contained"
+              text="Logowanie"
+              href="/pages/login"
+            ></SignupButton>
+            <SignupButton
+              variant="contained"
+              text="Rejestracja"
+              href="/pages/registration"
+            ></SignupButton>
+          </NavList>
+        </div>
+      </NavBarContainer>
+    </Wrapper>
   );
 };
 

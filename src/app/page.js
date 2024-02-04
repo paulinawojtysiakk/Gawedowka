@@ -18,7 +18,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 const IntroContainer = styled.div`
-  margin: 100px;
   display: flex;
   align-items: center;
 `;
@@ -39,35 +38,40 @@ const ImageContainerDets = styled.div`
 
 const Home = () => {
   return (
-    <Wrapper className={styles.main}>
+    <>
       <NavBar />
-      <IntroContainer>
-        <Image
-          src={Bonjour}
-          alt="bonjour"
-          height="350"
-          style={{ borderRadius: "5px" }}
-        ></Image>
-        <Introduction>
-          <h3>Lorem ipsum lorem lorem</h3>
+
+      <Wrapper className={styles.main}>
+        <IntroContainer>
+          <Image
+            src={Bonjour}
+            alt="bonjour"
+            height="350"
+            style={{ borderRadius: "5px" }}
+          ></Image>
+          <Introduction>
+            <h3>Lorem ipsum lorem lorem</h3>
+            <p>
+              Darmowa platforma do nauki języka polskiego dla ukraińskich
+              uczniów. Nasi nauczyciele podczas grupowych lekcji online szybko i
+              w praktyczny sposób nauczą Cię używać języka polskiego w
+              codziennych sytuacjach. Darmowa platforma do nauki języka
+              polskiego dla ukraińskich uczniów. Nasi nauczyciele podczas
+              grupowych lekcji online szybko i w praktyczny sposób nauczą Cię
+              używać języka polskiego w codziennych sytuacjach.
+            </p>
+          </Introduction>
+        </IntroContainer>
+        <OurOffer />
+        <ImageContainerDets>
           <p>
-            Darmowa platforma do nauki języka polskiego dla ukraińskich uczniów.
-            Nasi nauczyciele podczas grupowych lekcji online szybko i w
-            praktyczny sposób nauczą Cię używać języka polskiego w codziennych
-            sytuacjach. Darmowa platforma do nauki języka polskiego dla
-            ukraińskich uczniów. Nasi nauczyciele podczas grupowych lekcji
-            online szybko i w praktyczny sposób nauczą Cię używać języka
-            polskiego w codziennych sytuacjach.
+            Lorem ipsum lorem lorem Lorem ipsum lorem lorem Lorem ipsum lorem
           </p>
-        </Introduction>
-      </IntroContainer>
-      <OurOffer />
-      <ImageContainerDets>
-        <p>Lorem ipsum lorem lorem Lorem ipsum lorem lorem Lorem ipsum lorem</p>
-        <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
-      </ImageContainerDets>
+          <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
+        </ImageContainerDets>
+      </Wrapper>
       <Footer />
-    </Wrapper>
+    </>
   );
 };
 

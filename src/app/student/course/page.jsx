@@ -91,18 +91,20 @@ const StudentCourseSignup = () => {
   };
 
   return (
-    <div className={styles.main}>
+    <>
       <NavBar />
 
-      <Wizard
-        steps={steps}
-        renderForms={renderForms}
-        handleNext={handleNext}
-        handleBack={handleBack}
-        activeStep={activeStep}
-      />
+      <div className={styles.main}>
+        <Wizard
+          steps={steps}
+          renderForms={renderForms}
+          handleNext={handleNext}
+          handleBack={handleBack}
+          activeStep={activeStep}
+        />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
