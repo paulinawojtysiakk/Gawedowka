@@ -1,4 +1,5 @@
 "use client";
+import "src/app/globals.css";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,6 +9,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const FooterContainer = styled.div`
   background-color: #fffff9;
+  color: var(--basic-text-color);
   border: 1px solid cream;
   border-radius: 5px
   width: 100%;
@@ -31,6 +33,9 @@ const FooterColumn = styled.ul`
 `;
 
 const FooterElement = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 10px 0;
   list-style: none;
 `;
@@ -66,21 +71,24 @@ const Footer = () => {
             <Link href="/pages/contact">Contact@learnfrench.pl</Link>
           </FooterElement>
           <FooterElement>
+            <FacebookIcon />
+
             <Link
               href="https://www.facebook.com/learn.french.school/"
               target="_blank"
             >
-              <FacebookIcon />
-              Odwiedź nasz fanpage
+              Facebook{" "}
             </Link>
           </FooterElement>
         </FooterColumn>
         <FooterColumn>
           <b>Kontakt</b>
-          <FooterElement>+48 507 888 201</FooterElement>
-          <FooterElement>ul. Żelazna 59 </FooterElement>
-          <FooterElement>Warszawa</FooterElement>
-          <FooterElement>00-802</FooterElement>
+          <FooterElement>
+            +48 507 888 201 <br />
+            ul. Żelazna 59 <br />
+            Warszawa <br />
+            00-802
+          </FooterElement>
         </FooterColumn>
       </TextContainer>
     </FooterContainer>

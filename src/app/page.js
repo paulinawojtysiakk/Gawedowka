@@ -1,4 +1,5 @@
 "use client";
+import "src/app/globals.css";
 import React from "react";
 import styled from "styled-components";
 import styles from "./page.module.css";
@@ -9,13 +10,16 @@ import OurOffer from "src/components/organisms/ourOffer";
 
 import Bonjour from "public/images/bonjour.jpeg";
 import Eiffel from "public/images/book-eiffel.png";
-
-import { Provider } from "react-redux";
+import HomeIcon from "@mui/icons-material/Home";
+import GroupsIcon from "@mui/icons-material/Groups";
+import PersonIcon from "@mui/icons-material/Person";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--basic-text-color);
 `;
 const IntroContainer = styled.div`
   display: flex;
@@ -30,18 +34,28 @@ const Introduction = styled.div`
   line-height: 2;
 `;
 
-const ImageContainerDets = styled.div`
+const StudyingContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 90px;
+  color: var(--basic-text-color);
+`;
+const StudyingDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+const StudyingDetailsElement = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 const Home = () => {
   return (
     <>
       <NavBar />
-
       <Wrapper className={styles.main}>
         <IntroContainer>
           <Image
@@ -64,12 +78,27 @@ const Home = () => {
             </p>
           </Introduction>
         </IntroContainer>
-        <ImageContainerDets>
-          <p>
-            Lorem ipsum lorem lorem Lorem ipsum lorem lorem Lorem ipsum lorem
-          </p>
+        <StudyingContainer>
+          <StudyingDetails>
+            <StudyingDetailsElement>
+              W naszej szkole masz wybór różnych trybów nauki:
+            </StudyingDetailsElement>
+            <StudyingDetailsElement>
+              <GroupsIcon /> W ramach zajęć grupowych
+            </StudyingDetailsElement>
+            <StudyingDetailsElement>
+              <PersonIcon /> W ramach zajęć indywidualnych
+            </StudyingDetailsElement>
+
+            <StudyingDetailsElement>
+              <LaptopMacIcon /> Z domu, na zajęciach online
+            </StudyingDetailsElement>
+            <StudyingDetailsElement>
+              <HomeIcon /> W naszej szkole, na zajęciach stacjonarnych
+            </StudyingDetailsElement>
+          </StudyingDetails>
           <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
-        </ImageContainerDets>
+        </StudyingContainer>
         <OurOffer />
       </Wrapper>
       <Footer />

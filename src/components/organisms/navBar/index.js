@@ -1,4 +1,5 @@
 "use client";
+import "src/app/globals.css";
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
@@ -12,6 +13,9 @@ const Wrapper = styled.div`
 
 const NavBarContainer = styled.div`
   background-color: #fffff9;
+  color: var(--basic-text-color);
+  text-transform: uppercase;
+  font-weight: 500;
   padding: 10px;
   display: flex;
   justify-content: space-between;
