@@ -17,7 +17,7 @@ const CardWrapper = styled.li`
   margin: 0 20px;
   padding: 15px;
   max-width: 300px;
-  height: 500px;
+  max-height: 500px;
   text-align: justify;
 `;
 
