@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "src/app/page.module.css";
 import styled from "styled-components";
 import NavBar from "src/components/organisms/navBar";
@@ -29,6 +29,14 @@ const Introduction = styled.div`
   text-align: justify;
   line-height: 2;
 `;
+const HoverImage = styled(Image)`
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+&:hover{
+transform: scale(0.9);
+opacity: 0.8;
+}
+`
 
 const ValuesContainer = styled.div`
   display: flex;
@@ -63,7 +71,11 @@ const ProgramCard = styled.div`
   margin: 30px 0;
   padding: 50px;
   text-align: center;
-`;
+transition: transform 0.3s ease, opacity 0.3s ease;
+
+&:hover{
+transform: scale(1.1);
+}`;
 
 const ProgramName = styled.h3`
   margin-bottom: 20px;
@@ -76,11 +88,11 @@ const ProgramDescription = styled.p`
 
 const About = () => {
   return (
-    <>
+    <Fragment className={styles.main}>
       <NavBar />
       <Wrapper className="container">
       <IntroContainer>
-          <Image
+          <HoverImage
             src={TeamImage}
             alt="Our Team"
             height="380"
@@ -112,7 +124,7 @@ const About = () => {
           Wspólnie dążymy do stworzenia przestrzeni, w której każdy poczuje się swobodnie, aby eksperymentować z językiem, zadawać pytania i odkrywać nowe możliwości. Nasza wizja to miejsce, gdzie każdy pasjonat języka francuskiego może znaleźć swoje miejsce, niezależnie od poziomu umiejętności, i rozwijać się w atmosferze pełnej szacunku, kreatywności oraz pasji.
         </ValueElement>
           
-          <Image src={LearningImage} alt="Learning" height="400" style={{ borderRadius: '10px', alignSelf: 'center'}} />
+          <HoverImage src={LearningImage} alt="Learning" height="400" style={{ borderRadius: '10px', alignSelf: 'center'}} className="image-hover"/>
           
         </ValuesContainer>
         <ProgramsContainer>
@@ -144,7 +156,7 @@ const About = () => {
 
       </Wrapper>
       <Footer />
-    </>
+    </Fragment>
   );
 };
 
