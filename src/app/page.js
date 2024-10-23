@@ -7,6 +7,7 @@ import Image from "next/image";
 import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 import OurOffer from "src/components/organisms/ourOffer";
+import { motion } from "framer-motion";
 
 import Bonjour from "public/images/bonjour.jpeg";
 import Eiffel from "public/images/book-eiffel.png";
@@ -21,11 +22,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   color: var(--basic-text-color);
 `;
-const IntroContainer = styled.div`
+const IntroContainer = motion(styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 100px;
-`;
+`);
 
 const Introduction = styled.div`
   margin: 50px;
@@ -34,13 +35,13 @@ const Introduction = styled.div`
   line-height: 2;
 `;
 
-const StudyingContainer = styled.div`
+const StudyingContainer = motion(styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 90px;
   color: var(--basic-text-color);
-`;
+`);
 const StudyingDetails = styled.div`
   display: flex;
   flex-direction: column;
@@ -57,7 +58,11 @@ const Home = () => {
     <>
       <NavBar />
       <Wrapper className={styles.main}>
-        <IntroContainer>
+        <IntroContainer
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+        >
           <Image
             src={Bonjour}
             alt="bonjour"
@@ -78,7 +83,11 @@ const Home = () => {
             </p>
           </Introduction>
         </IntroContainer>
-        <StudyingContainer>
+        <StudyingContainer
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+        >
           <StudyingDetails>
             <StudyingDetailsElement>
               W naszej szkole masz wybór różnych trybów nauki:
