@@ -14,22 +14,34 @@ const BasicCard = ({
   onClick,
   maxWidth,
   buttonText,
+  variant,
+  titleColor,
+  descriptionColor,
 }) => {
   return (
     <Card sx={{ maxWidth: maxWidth }}>
       <CardActionArea>
         <CardMedia component="img" max-width={imgWidth} src={src} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            style={{ color: titleColor }}
+          >
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            style={{ color: descriptionColor }}
+          >
             {description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions sx={{ justifyContent: "center", margin: "10px 0" }}>
-        <Button variant="outlined" text={buttonText} onClick={onClick} />
+        <Button variant={variant} text={buttonText} onClick={onClick} />
       </CardActions>
     </Card>
   );

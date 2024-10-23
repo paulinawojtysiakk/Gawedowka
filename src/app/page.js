@@ -1,6 +1,6 @@
 "use client";
 import "src/app/globals.css";
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 import OurOffer from "src/components/organisms/ourOffer";
 import { motion } from "framer-motion";
+import Grid from "@mui/material/Grid";
 
 import Bonjour from "public/images/bonjour.jpeg";
 import Eiffel from "public/images/book-eiffel.png";
@@ -19,31 +20,35 @@ import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   color: var(--basic-text-color);
 `;
-const IntroContainer = motion(styled.div`
+const IntroContainer = motion.create(styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 100px;
 `);
 
 const Introduction = styled.div`
-  margin: 50px;
+  margin: 50px 20px;
   max-width: 600px;
   text-align: justify;
   line-height: 2;
 `;
 
-const StudyingContainer = motion(styled.div`
+const StudyingContainer = motion.create(styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 90px;
+  margin: 90px 20px;
   color: var(--basic-text-color);
 `);
 const StudyingDetails = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
 `;
@@ -66,8 +71,11 @@ const Home = () => {
           <Image
             src={Bonjour}
             alt="bonjour"
-            height="380"
-            style={{ borderRadius: "5px" }}
+            style={{
+              borderRadius: "5px",
+              maxHeight: "380px",
+              maxWidth: "550px",
+            }}
           ></Image>
           <Introduction>
             <h1>Język francuski to nasza pasja</h1>
@@ -83,6 +91,8 @@ const Home = () => {
             </p>
           </Introduction>
         </IntroContainer>
+        <OurOffer />
+
         <StudyingContainer
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +118,6 @@ const Home = () => {
           </StudyingDetails>
           <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
         </StudyingContainer>
-        <OurOffer />
       </Wrapper>
       <Footer />
     </>

@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 
 const IntroContainer = styled.div`
   display: flex;
+  padding:10px;
   align-items: center;
   margin-bottom: 50px;
 `;
@@ -88,7 +89,7 @@ const ProgramDescription = styled.p`
 
 const About = () => {
   return (
-    <Fragment className={styles.main}>
+    <Fragment >
       <NavBar />
       <Wrapper className="container">
       <IntroContainer>

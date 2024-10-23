@@ -42,19 +42,18 @@ const NavList = styled.ul`
 const NavElement = styled.li`
   margin: 0 20px;
   &:hover {
-    // transition-delay: 0.1s;
-    color: #5072a7;
+    color: #53a8b6;
     text-decoration: underline;
     text-underline-offset: 8px;
   }
 `;
 const SignupButton = styled(ButtonText)`
   margin-left: 10px;
-  background-color: #53a8b6;
+  background-color: #5072a7;
 `;
 const CourseSignup = styled(ButtonText)`
   margin-right: 40px;
-  background-color: #53a8b6;
+  background-color: #5072a7;
 `;
 
 const NavBar = () => {
