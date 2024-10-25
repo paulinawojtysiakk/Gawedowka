@@ -1,12 +1,12 @@
 .main {
+  max-width: 1180px;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; 
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden ;
-  /* padding: 2rem; */
-  /* min-height: 100vh; */
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 100vh;
+
 }
 
 .logo {
@@ -32,9 +32,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; 
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px; 
-    
+    margin: auto;    
   }
  
   .content {

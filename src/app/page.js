@@ -18,16 +18,10 @@ import PersonIcon from "@mui/icons-material/Person";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   color: var(--basic-text-color);
 `;
 const IntroContainer = motion.create(styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 100px;
 `);
