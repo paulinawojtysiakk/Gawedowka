@@ -1,7 +1,6 @@
 import React from "react";
 import ProgressMobileStepper from "src/components/organisms/stepperNav";
 import styled from "styled-components";
-import "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,6 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 80px 0;
+  color: var(--basic-text-color);
 `;
 const Description = styled.div`
   max-width: 700px;
@@ -22,7 +22,7 @@ const OfflineCourse = ({ activeStep, handleNext, handleBack }) => {
     <>
       <Wrapper>
         <h4>
-          Tutaj mozesz zapisać się na zajęcia stacjonarne z języka francuskiego.
+          Tutaj możesz zapisać się na zajęcia stacjonarne z języka francuskiego.
         </h4>
         <Description>
           Grupy tworzymy w pierwszym tygodniu września oraz pierwszym tygodniu
