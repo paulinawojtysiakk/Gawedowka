@@ -91,7 +91,7 @@ const About = () => {
   return (
     <Fragment >
       <NavBar />
-      <Wrapper className="container">
+      <Wrapper className={styles.main}>
       <IntroContainer>
           <HoverImage
             src={TeamImage}

@@ -49,7 +49,7 @@ const Footer = () => {
         <FooterColumn>
           <b>Prawne</b>
           <FooterElement>
-            <Link href="/legal/przewodnik.pdf" target="_blank">
+            <Link href="/legal/Regulamin.pdf" target="_blank">
               Regulamin
             </Link>
           </FooterElement>

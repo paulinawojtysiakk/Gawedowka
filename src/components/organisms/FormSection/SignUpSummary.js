@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  color: var(--basic-text-color);
 
   &:first-child {
     margin: 20px;
