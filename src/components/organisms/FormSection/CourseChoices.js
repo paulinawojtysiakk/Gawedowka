@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import Button from "src/components/atoms/Button";
 import styled from "styled-components";
+import Divider from "@mui/material/Divider";
 
-const StyledDiv = styled.div`
+const Wrapper = styled.div`
   padding: 15px 0;
+  color: var(--basic-text-color);
+`;
+const CourseWrapper = styled.div`
+  padding: 20px;
+`;
+const CourseTitle = styled.h2`
+  padding-bottom: 20px;
 `;
 const CourseDetails = styled.p`
-  padding: 10px;
-
+  padding-bottom: 10px;
   &:nth-child(4) {
     margin-bottom: 10px;
   }
@@ -114,22 +121,23 @@ const CourseList = ({ ageGroup, setCourse, handleNext }) => {
 
   return (
     <div>
-      <h2>Lista dostępnych kursów</h2>
-
       {courses[ageGroup].map((course, index) => (
         <div key={course.index}>
-          <StyledDiv>
-            <h2>{course.name}</h2>
-            <CourseDetails>Grupa wiekowa: {ageGroup}</CourseDetails>
-            <CourseDetails>{course.level}</CourseDetails>
-            <CourseDetails>{course.description}</CourseDetails>
-            <Button
-              onClick={() => handleClick(course)}
-              value={course}
-              variant="contained"
-              text="Zapisuję się!"
-            />
-          </StyledDiv>
+          <Wrapper>
+            <Divider />
+            <CourseWrapper>
+              <CourseTitle>{course.name}</CourseTitle>
+              <CourseDetails>Grupa wiekowa: {ageGroup}</CourseDetails>
+              <CourseDetails>{course.level}</CourseDetails>
+              <CourseDetails>{course.description}</CourseDetails>
+              <Button
+                onClick={() => handleClick(course)}
+                value={course}
+                variant="contained"
+                text="Zapisuję się!"
+              />
+            </CourseWrapper>
+          </Wrapper>
         </div>
       ))}
     </div>
