@@ -8,28 +8,24 @@ import ButtonText from "src/components/atoms/Button";
 import BasicTextField from "src/components/atoms/TextField/textField";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+color: var(--basic-text-color);
 `;
 
 const RegistrationContainer = styled.div`
-  padding: 20px;
-  margin: 100px;
+  padding: 70px;
   text-align: center;
+  background-color: white;
+  border-radius: 8px;
 `;
 
 const Form = styled.form`
-  margin: 10px 0 50px 0;
+  margin: 10px 0 ;
 `;
 
 const Button = styled(ButtonText)`
   margin: 10px;
-  background-color: #53a8b6;
 `;
 const LoginButton = styled(ButtonText)`
-  color: lightblue;
-  border-color: #f9f6f0;
 `;
 
 const Text = styled.p`

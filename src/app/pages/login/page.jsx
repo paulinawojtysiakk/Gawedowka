@@ -9,33 +9,32 @@ import BasicTextField from "src/components/atoms/TextField/textField";
 import ButtonText from "src/components/atoms/Button";
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  color: var(--basic-text-color);
+
 `;
 const LoginContainer = styled.div`
-  padding: 20px;
-  margin: 100px;
+  padding: 70px;
   text-align: center;
+  color: var(--basic-text-color);
+  background-color: white;
+  border-radius: 8px;
 `;
 const Form = styled.form`
-  margin: 20px 0 60px 0;
+  margin: 20px 0;
 `;
-const Button = styled(ButtonText)`
-  margin: 30px;
-  background-color: #53a8b6;
+
+const LoginButton = styled(ButtonText)`
+  margin: 10px;
 `;
 const RegButton = styled(ButtonText)`
-  margin: 20px;
-  color: lightblue;
-  border-color: #f9f6f0;
+margin: 10px;
 `;
 const Text = styled.p`
   margin-bottom: 10px;
 `;
 
 const Login = () => {
-  const [email, setEmail] = useState(localStorage.getItem("email"));
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
@@ -64,8 +63,10 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></BasicTextField>
-            <Button text="Zaloguj się" variant="contained" type="submit" />
+           <LoginButton text="Zaloguj się" variant="contained" type="submit" />
+
           </Form>
+
           <Text>Nie masz swojego konta?</Text>
           <RegButton
             text="Zarejestruj się"
