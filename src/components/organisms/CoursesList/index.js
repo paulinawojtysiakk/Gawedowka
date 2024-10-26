@@ -7,7 +7,7 @@ import RegistrationPage from "/src/app/pages/registration/page.jsx";
 import BasicAlert from "src/components/atoms/Alert";
 
 const Wrapper = styled.div`
-  padding: 10px 30px;
+  padding: 15px 30px;
   color: var(--basic-text-color);
 `;
 const CoursesTitle = styled.h2`
