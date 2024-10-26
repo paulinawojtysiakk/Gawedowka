@@ -8,6 +8,7 @@ import BasicAlert from "src/components/atoms/Alert";
 
 const Wrapper = styled.div`
   padding: 10px 30px;
+  color: var(--basic-text-color);
 `;
 const CoursesTitle = styled.h2`
   padding-bottom: 40px;
@@ -32,8 +33,20 @@ const CourseEl = styled.li`
   margin-top: 10px;
 `;
 const SignupButton = styled(ButtonText)`
-  margin: 20px 10px;
+  margin: 20px 0;
   background-color: #79c2d0;
+`;
+const Img = styled.img`
+  max-width: 150px;
+  max-height: 120px;
+  background-color: white;
+  priority={false}
+`;
+const SignupAlert = styled(BasicAlert)`
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
 `;
 
 const ListOfCourses = [
@@ -72,19 +85,6 @@ const ListOfCourses = [
       "Ten kurs nauczy cię płynnego wypowiadania się. Na zajęciach nauczysz się rozumieć znaczenie głównych wątków zawartych w złożonych wypowiedziach na tematy konkretne i abstrakcyjne, w tym merytoryczne dyskusje z zakresu jej specjalności. Bedziesz w stanie porozumiewać się na tyle płynnie i spontanicznie, by przeprowadzić rozmowę z rodzimym użytkownikiem danego języka, bez specjalnego wysiłku żadnej ze stron oraz formułować przejrzyste, szczegółowe wypowiedzi, jednocześnie  wyjaśniając swój punkt widzenia na dany temat oraz rozważając wady i zalety różnych możliwości.",
   },
 ];
-const Img = styled.img`
-  max-width: 150px;
-  max-height: 120px;
-  background-color: white;
-  priority={false}
-`;
-
-const SignupAlert = styled(BasicAlert)`
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 1;
-`;
 
 const CourseItem = ({ course, handleSignup }) => (
   <CoursesBox>
@@ -93,7 +93,7 @@ const CourseItem = ({ course, handleSignup }) => (
       <DetailsContainer>
         <h3>{course.title}</h3>
         <CourseEl>Kurs trwa: {course.length}</CourseEl>
-        <CourseEl>Zajęcia odbywają się: {course.time}</CourseEl>
+        <CourseEl>Zajęcia odbywają się w: {course.time}</CourseEl>
       </DetailsContainer>
     </ImageContainer>
     <CourseEl>{course.description}</CourseEl>
@@ -117,18 +117,7 @@ const CoursesList = () => {
   const [showForm, setShowForm] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
 
-  const isUserLoggedIn = () => {
-    return localStorage.getItem("userToken") !== null;
-  };
-
-  const handleSignup = () => {
-    if (isUserLoggedIn()) {
-      console.log("User zalogowany.");
-      setShowAlert(true);
-    } else {
-      setShowForm("login");
-    }
-  };
+  const handleSignup = () => {};
 
   return (
     <Wrapper>
