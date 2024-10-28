@@ -81,7 +81,7 @@ const NavBar = () => {
             <NavElement>
               <Link href="/pages/contact">Kontakt</Link>
             </NavElement>
-            <NavElement>
+            {/* <NavElement>
               <Link href="/student/profile">Mój profil</Link>
             </NavElement>
 
@@ -94,7 +94,7 @@ const NavBar = () => {
               variant="contained"
               text="Rejestracja"
               href="/pages/registration"
-            ></SignupButton>
+            ></SignupButton> */}
           </NavList>
         </div>
       </NavBarContainer>
