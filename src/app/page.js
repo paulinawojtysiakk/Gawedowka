@@ -54,7 +54,7 @@ const StudyingDetailsElement = styled.p`
 
 const Home = () => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <NavBar />
       <Wrapper className={styles.main}>
         <IntroContainer
@@ -114,7 +114,7 @@ const Home = () => {
         </StudyingContainer>
       </Wrapper>
       <Footer />
-    </>
+    </div>
   );
 };
 

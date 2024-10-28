@@ -89,7 +89,7 @@ const ProgramDescription = styled.p`
 
 const About = () => {
   return (
-    <Fragment >
+    <div className={styles.wrapper} >
       <NavBar />
       <Wrapper className={styles.main}>
       <IntroContainer>
@@ -157,7 +157,7 @@ const About = () => {
 
       </Wrapper>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 
