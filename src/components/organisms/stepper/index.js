@@ -8,16 +8,15 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
+import styled from "styled-components";
 
-const CourseSignupStepper = ({
-  steps,
-  renderForms,
-  activeStep,
-  // handleNext,
-  // handleBack,
-}) => {
+const StyledBox = styled(Box)`
+  margin-bottom: 50px;
+`;
+
+const CourseSignupStepper = ({ steps, renderForms, activeStep }) => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <StyledBox sx={{ width: "100%" }}>
       <Card sx={{ minHeight: "600px" }}>
         <CardContent>
           <Stack
@@ -43,7 +42,7 @@ const CourseSignupStepper = ({
           </Stack>
         </CardContent>
       </Card>
-    </Box>
+    </StyledBox>
   );
 };
 

@@ -8,14 +8,14 @@ import LoginPage from "/src/app/pages/login/page.jsx";
 
 const CoursesPage = () => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <NavBar />
 
       <div className={styles.main}>
         <CoursesList />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

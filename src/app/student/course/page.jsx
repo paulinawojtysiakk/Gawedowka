@@ -91,7 +91,7 @@ const StudentCourseSignup = () => {
   };
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <NavBar />
 
       <div className={styles.main}>
@@ -104,7 +104,7 @@ const StudentCourseSignup = () => {
         />
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
