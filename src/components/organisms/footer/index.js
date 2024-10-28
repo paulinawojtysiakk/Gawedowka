@@ -56,7 +56,7 @@ const Footer = () => {
           <FooterElement>Dla nauczyciela</FooterElement>
         </FooterColumn>
 
-        <FooterColumn>
+        {/* <FooterColumn>
           <b>Linki</b>
           <FooterElement>
             <Link href="/pages/registration">Rejestracja</Link>
@@ -64,7 +64,7 @@ const Footer = () => {
           <FooterElement>
             <Link href="/pages/login"> Logowanie</Link>
           </FooterElement>
-        </FooterColumn>
+        </FooterColumn> */}
         <FooterColumn>
           <b>Napisz do nas</b>
           <FooterElement>

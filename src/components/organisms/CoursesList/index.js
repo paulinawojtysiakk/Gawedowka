@@ -5,6 +5,14 @@ import ButtonText from "src/components/atoms/Button";
 import LoginPage from "/src/app/pages/login/page.jsx";
 import RegistrationPage from "/src/app/pages/registration/page.jsx";
 import BasicAlert from "src/components/atoms/Alert";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { createClient } from "@supabase/supabase-js";
 
 const Wrapper = styled.div`
   padding: 15px 30px;
@@ -86,7 +94,7 @@ const ListOfCourses = [
   },
 ];
 
-const CourseItem = ({ course, handleSignup }) => (
+const CourseItem = ({ course, handleOpenSignup }) => (
   <CoursesBox>
     <ImageContainer>
       <Img src={course.img} alt={course.title}></Img>
@@ -100,42 +108,157 @@ const CourseItem = ({ course, handleSignup }) => (
     <SignupButton
       variant="contained"
       text="Zapisuję się!"
-      onClick={handleSignup}
+      onClick={handleOpenSignup}
     />
   </CoursesBox>
 );
 
-const CourseList = ({ courses, handleSignup }) => (
+const CourseList = ({ courses, handleOpenSignup }) => (
   <div>
     {courses.map((course, index) => (
-      <CourseItem key={index} course={course} handleSignup={handleSignup} />
+      <CourseItem
+        key={index}
+        course={course}
+        handleOpenSignup={handleOpenSignup}
+      />
     ))}
   </div>
 );
 
 const CoursesList = () => {
-  const [showForm, setShowForm] = useState(null);
+  const [showSignup, setShowSignup] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
-  const handleSignup = () => {};
+  const handleOpenSignup = () => {
+    setShowSignup(true);
+  };
+  const handleCloseSignup = () => {
+    setShowSignup(false);
+  };
+
+  const supabaseURL = "https://grzsoccvxlecdfdlexrl.supabase.co";
+  const supabaseAnonKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdyenNvY2N2eGxlY2RmZGxleHJsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NTExNjAsImV4cCI6MjA0MjMyNzE2MH0.xxdTk_R4WU_r9TH4sFoP5a-X5ufP1VunC2biVaUZH4c";
+
+  const supabase = createClient(supabaseURL, supabaseAnonKey);
+
+  const submitToSupabase = async () => {
+    const { data, error } = await supabase
+      .from("online-courses-students")
+      .insert([
+        {
+          name,
+          email,
+          phone_number: phoneNumber,
+        },
+      ]);
+    if (error) {
+      alert("Błąd w zapisywaniu na kurs, spróbuj ponownie.", error);
+    } else {
+      alert("Super, zostałeś zapisany na kurs!", data);
+    }
+  };
 
   return (
     <Wrapper>
       <CoursesTitle>Tutaj możesz zapisać się na kursy online:</CoursesTitle>
-      <CourseList courses={ListOfCourses} handleSignup={handleSignup} />
+      <CourseList courses={ListOfCourses} handleOpenSignup={handleOpenSignup} />
+
+      <Dialog
+        open={showSignup}
+        onClose={handleCloseSignup}
+        PaperProps={{
+          component: "form",
+          onSubmit: (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.currentTarget);
+            const formJson = Object.fromEntries(formData.entries());
+            const email = formJson.email;
+            console.log(email);
+            handleCloseSignup();
+          },
+        }}
+      >
+        <DialogTitle
+          style={{
+            color: "var(--basic-text-color)",
+            margin: "20px 0",
+            textAlign: "center",
+          }}
+        >
+          Zapisz się na kurs poniżej
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText style={{ color: "var(--basic-text-color)" }}>
+            Aby zapisać się na wybrany kurs online, podaj swoje dane kontaktowe.
+          </DialogContentText>
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="name"
+            name="name"
+            label="Imię i nazwisko"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="email"
+            name="email"
+            label="Adres email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="phoneNumber"
+            name="phoneNumber"
+            label="Numer telefonu"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            type="phoneNumber"
+            fullWidth
+            variant="standard"
+          />
+        </DialogContent>
+        <DialogActions
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            margin: "10px 0 20px 0",
+          }}
+        >
+          <Button variant="outlined" type="submit" onClick={submitToSupabase}>
+            Zapisuję się!
+          </Button>
+          <Button
+            variant="outlined"
+            onClick={handleCloseSignup}
+            style={{ padding: "5px 35px" }}
+          >
+            Anuluj
+          </Button>
+        </DialogActions>
+      </Dialog>
+
       {showAlert && (
         <SignupAlert
           severity="success"
           text="Zapisałeś się na kurs"
           onClose={() => setShowAlert(false)}
         />
-      )}
-
-      {showForm === "register" && (
-        <RegistrationPage switchForm={() => switchForm("login")} />
-      )}
-      {showForm === "login" && (
-        <LoginPage switchForm={() => switchForm("register")} />
       )}
     </Wrapper>
   );
