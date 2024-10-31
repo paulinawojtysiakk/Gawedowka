@@ -25,6 +25,7 @@ const LogoContainer = styled.div`
 `;
 const TextContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 `;
 

@@ -14,14 +14,25 @@ const CardContainer = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 10px;
+  }
 `;
 const CardWrapper = styled.li`
   margin: 0 10px;
   padding: 10px;
   max-width: 33%;
   flex: 1;
-  // max-height: 500px;
   text-align: justify;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const cardsContent = [

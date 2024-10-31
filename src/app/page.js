@@ -1,6 +1,6 @@
 "use client";
 import "src/app/globals.css";
-import React, { Fragment } from "react";
+import React from "react";
 import styled from "styled-components";
 import styles from "./page.module.css";
 import Image from "next/image";
@@ -8,7 +8,6 @@ import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 import OurOffer from "src/components/organisms/ourOffer";
 import { motion } from "framer-motion";
-import Grid from "@mui/material/Grid";
 
 import Bonjour from "public/images/bonjour.jpeg";
 import Eiffel from "public/images/book-eiffel.png";
@@ -24,6 +23,23 @@ const IntroContainer = motion.create(styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0;
+    max-width: 100vw;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    max-width: 100vw;
+  }
 `);
 
 const Introduction = styled.div`
@@ -31,6 +47,10 @@ const Introduction = styled.div`
   max-width: 600px;
   text-align: justify;
   line-height: 2;
+
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    max-width: 550px;
+  }
 `;
 
 const StudyingContainer = motion.create(styled.div`
@@ -38,7 +58,27 @@ const StudyingContainer = motion.create(styled.div`
   justify-content: space-around;
   align-items: center;
   margin: 90px 20px;
+  gap: 10px;
   color: var(--basic-text-color);
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 50px 10px;
+    padding: 20px;
+
+    max-width: 100vw;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 50px 10px;
+    max-width: 100vw;
+  }
 `);
 const StudyingDetails = styled.div`
   display: flex;
@@ -51,6 +91,21 @@ const StudyingDetailsElement = styled.p`
   align-items: center;
   gap: 10px;
 `;
+const StyledEiffel = styled(Image)`
+  width: 100%;
+  max-width: 100vw;
+
+  @media (min-width: 769px) {
+    width: auto;
+    max-height: 350px;
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: auto;
+    max-width: 100vw;
+  }
+`;
 
 const Home = () => {
   return (
@@ -61,6 +116,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
+          className={styles.mainIntroCont}
         >
           <Image
             src={Bonjour}
@@ -71,7 +127,7 @@ const Home = () => {
               maxWidth: "550px",
             }}
           ></Image>
-          <Introduction>
+          <Introduction className={styles.mainIntroText}>
             <h1>Język francuski to nasza pasja</h1>
             <p>
               Ogólny kurs francuskiego w Learn French to najczęściej kilkuletni
@@ -110,7 +166,11 @@ const Home = () => {
               <HomeIcon /> W naszej szkole, na zajęciach stacjonarnych
             </StudyingDetailsElement>
           </StudyingDetails>
-          <Image src={Eiffel} alt="book-eiffel" height="350"></Image>
+          <StyledEiffel
+            src={Eiffel}
+            alt="book-eiffel"
+            // max-height="350"
+          ></StyledEiffel>
         </StudyingContainer>
       </Wrapper>
       <Footer />
