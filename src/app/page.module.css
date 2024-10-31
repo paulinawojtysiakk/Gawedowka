@@ -11,10 +11,11 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 20px;
   flex-grow: 1; 
   overflow: hidden;
+  
 }
+
 
 .logo {
   position: relative;
@@ -32,21 +33,41 @@
   display: flex;
   flex-direction: column;
 
-
 }
 @media (max-width: 768px) {
   
+   .main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: flex-start;
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0;
+  }
+
+/* 
+  .mainIntroText{
+    margin: 0;
+    max-width: 100vw;
+    align-items: flex-start;
+    line-height: 1.5;
+    overflow-x: scroll;
+  } */
+
+  .content {
+    padding: 10px;
+  } 
+}
+
+@media only screen and (max-width: 1024) and (min-width: 768px){
   .main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;    
+    align-items: flex-start;
+    overflow-x: hidden;
+    margin: 0; 
+    padding: 0;
   }
- 
-  .content {
-    padding: 10px;
-  } 
 }

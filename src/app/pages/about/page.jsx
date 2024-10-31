@@ -22,6 +22,21 @@ const IntroContainer = styled.div`
   padding:10px;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100vw;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100vw;
+  }
 `;
 
 const Introduction = styled.div`
@@ -37,12 +52,44 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 transform: scale(0.9);
 opacity: 0.8;
 }
+
+  width: 100%;
+  max-width: 100vw;
+  border-radius: 8px;
+
+  @media (min-width: 769px) {
+    width: auto;
+    max-height: 380px;
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: auto;
+    max-width: 100vw;
+  }
 `
 
 const ValuesContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 70px;
+
+ @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 40px 0;
+    padding: 15px;
+    max-width: 100vw;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100vw;
+  }
 `;
 
 const ValuesTitle = styled.h2`
@@ -54,7 +101,10 @@ const ValueElement = styled.p`
   text-align: justify;
   margin: 20px 0;
     line-height: 2;
-
+    
+    @media (max-width: 768px){
+    margin: 0;
+}
 `;
 const ProgramsContainer = styled.div`
   margin: 50px 0;
@@ -63,6 +113,7 @@ const ProgramsContainer = styled.div`
 const ProgramsTitle = styled.h2`
   text-align: center;
   margin-bottom: 40px;
+  padding: 10px;
 `;
 
 const ProgramCard = styled.div`
@@ -76,7 +127,13 @@ transition: transform 0.3s ease, opacity 0.3s ease;
 
 &:hover{
 transform: scale(1.1);
-}`;
+}
+
+@media (max-width: 768px){
+margin: 30px 10px;
+}
+
+`;
 
 const ProgramName = styled.h3`
   margin-bottom: 20px;
@@ -96,8 +153,6 @@ const About = () => {
           <HoverImage
             src={TeamImage}
             alt="Our Team"
-            height="380"
-            style={{ borderRadius: "5px" }}
           />
           <Introduction>
             <h1>Kim jesteśmy?</h1>
