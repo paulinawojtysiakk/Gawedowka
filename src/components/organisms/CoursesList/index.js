@@ -26,7 +26,9 @@ const CoursesBox = styled.ul`
   text-align: justify;
   padding: 30px 40px;
   margin: 30px 0;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: solid 1px whitesmoke;
+  box-shadow: 2px 2px 2px 2px #fcf4d9;
   background-color: white;
 `;
 const ImageContainer = styled.div`
@@ -42,7 +44,7 @@ const CourseEl = styled.li`
 `;
 const SignupButton = styled(ButtonText)`
   margin: 20px 0;
-  background-color: #79c2d0;
+  background-color: #5072a7;
 `;
 const Img = styled.img`
   max-width: 150px;
@@ -165,8 +167,8 @@ const CoursesList = () => {
   return (
     <Wrapper>
       <CoursesTitle>Tutaj możesz zapisać się na kursy online:</CoursesTitle>
-      <CourseList courses={ListOfCourses} handleOpenSignup={handleOpenSignup} />
 
+      <CourseList courses={ListOfCourses} handleOpenSignup={handleOpenSignup} />
       <Dialog
         open={showSignup}
         onClose={handleCloseSignup}
@@ -191,6 +193,7 @@ const CoursesList = () => {
         >
           Zapisz się na kurs poniżej
         </DialogTitle>
+
         <DialogContent>
           <DialogContentText style={{ color: "var(--basic-text-color)" }}>
             Aby zapisać się na wybrany kurs online, podaj swoje dane kontaktowe.
@@ -240,13 +243,18 @@ const CoursesList = () => {
             margin: "10px 0 20px 0",
           }}
         >
-          <Button variant="outlined" type="submit" onClick={submitToSupabase}>
+          <Button
+            variant="contained"
+            type="submit"
+            onClick={submitToSupabase}
+            style={{ backgroundColor: "#5072a7" }}
+          >
             Zapisuję się!
           </Button>
           <Button
-            variant="outlined"
+            variant="contained"
             onClick={handleCloseSignup}
-            style={{ padding: "5px 35px" }}
+            style={{ padding: "5px 35px", backgroundColor: "#5072a7" }}
           >
             Anuluj
           </Button>
