@@ -49,13 +49,14 @@ const HoverImage = styled(Image)`
 transition: transform 0.3s ease, opacity 0.3s ease;
 
 &:hover{
-transform: scale(0.9);
+transform: scale(0.98);
 opacity: 0.8;
 }
 
   width: 100%;
   max-width: 100vw;
   border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px #2c2d34;
 
   @media (min-width: 769px) {
     width: auto;
@@ -107,7 +108,7 @@ const ValueElement = styled.p`
 }
 `;
 const ProgramsContainer = styled.div`
-  margin: 50px 0;
+  margin: 50px 10px;
 `;
 
 const ProgramsTitle = styled.h2`
@@ -119,6 +120,7 @@ const ProgramsTitle = styled.h2`
 const ProgramCard = styled.div`
   background-color: #fffdf6;
   border: 1px solid #ece8d9;
+  box-shadow: 2px 2px 2px 2px #fff4e1;
   border-radius: var(--border-radius);
   margin: 30px 0;
   padding: 50px;
