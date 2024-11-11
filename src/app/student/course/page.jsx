@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import styles from "/src/app/page.module.css";
 import NavBar from "src/components/organisms/navBar";
-import OfflineCourse from "src/components/organisms/formSection/OfflineCourses";
-import CourseSignUpStudentDetails from "src/components/organisms/formSection/StudentCourseSignup";
-import CourseSignUp from "src/components/organisms/formSection/CourseSignUp";
-import SignUpSummary from "src/components/organisms/formSection/SignUpSummary";
+import OfflineCourse from "/src/components/organisms/FormSection/OfflineCourses.js";
+import CourseSignUpStudentDetails from "/src/components/organisms/FormSection/StudentCourseSignUp.js";
+import CourseSignUp from "/src/components/organisms/FormSection/CourseSignUp.js";
+import SignUpSummary from "/src/components/organisms/FormSection/SignUpSummary.js";
 import Wizard from "src/components/templates/wizzard";
 import Footer from "src/components/organisms/footer";
 
