@@ -12,7 +12,7 @@ color: var(--basic-text-color);
 `;
 
 const RegistrationContainer = styled.div`
-  padding: 70px;
+  padding: 100px;
   text-align: center;
   background-color: white;
   border-radius: 8px;
@@ -43,7 +43,7 @@ const Register = () => {
   };
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <NavBar />
       <Wrapper className={styles.main}>
         <RegistrationContainer>
@@ -79,7 +79,7 @@ const Register = () => {
         </RegistrationContainer>
       </Wrapper>
       <Footer />
-    </>
+    </div>
   );
 };
 

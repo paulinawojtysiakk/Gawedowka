@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 `;
 const LoginContainer = styled.div`
-  padding: 70px;
+  padding: 100px;
   text-align: center;
   color: var(--basic-text-color);
   background-color: white;
@@ -45,7 +45,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <NavBar />
       <Wrapper className={styles.main}>
         <LoginContainer>
@@ -76,7 +76,7 @@ const Login = () => {
         </LoginContainer>
       </Wrapper>
       <Footer />
-    </>
+    </div>
   );
 };
 
