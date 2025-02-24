@@ -6,7 +6,6 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
-import OurOffer from "src/components/organisms/ourOffer";
 import { motion } from "framer-motion";
 
 import Bonjour from "public/images/bonjour.jpeg";
@@ -15,6 +14,10 @@ import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import GawedowkaDom from "public/images/Gawedowka-dom.JPG";
+import trojka from "public/images/trojka-1.JPEG";
+import trojka2 from "public/images/trojka-2.JPEG";
+import studio from "public/images/studio.JPEG";
 
 const Wrapper = styled.div`
   color: var(--basic-text-color);
@@ -94,6 +97,7 @@ const StudyingDetailsElement = styled.p`
 const StyledEiffel = styled(Image)`
   width: 100%;
   max-width: 100vw;
+  border-radius: 5px;
 
   @media (min-width: 769px) {
     width: auto;
@@ -119,7 +123,7 @@ const Home = () => {
           className={styles.mainIntroCont}
         >
           <Image
-            src={Bonjour}
+            src={GawedowkaDom}
             alt="bonjour"
             style={{
               borderRadius: "5px",
@@ -128,20 +132,17 @@ const Home = () => {
             }}
           ></Image>
           <Introduction className={styles.mainIntroText}>
-            <h1>Język francuski to nasza pasja</h1>
+            <h1>Apartamenty w Gawędówce</h1>
             <p>
-              Ogólny kurs francuskiego w Learn French to najczęściej kilkuletni
-              cykl nauki prowadzący od poziomu początkującego A1 do poziomu
-              biegłości językowej C1/C2. Jeden poziom zaawansowania realizowany
-              jest przez 2 semestry nauki. Nasze programy nauczania języka
-              francuskiego realizujemy z wykorzystaniem serii podręczników
-              opracowanych we Francji przez wydawnictwo Hachette. Po każdym
-              etapie nasi Słuchacze mogą przystępować do międzynarodowych
-              egzaminów DELF (A1-B2) i DALF (C1, C2).
+              Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem. Z
+              tyłu domu jest ogród z ławkami, miejscem do grilla oraz
+              trampoliną. Zaraz obok znajduje się Banderoza, która jest altaną z
+              pięknymi dawnymi rzeczami rzemiślniczymi.
+              <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
+              szlaki górskie, takie jak Sokolica oraz Trzy Korony.
             </p>
           </Introduction>
         </IntroContainer>
-        <OurOffer />
 
         <StudyingContainer
           initial={{ opacity: 0, y: 50 }}
@@ -150,24 +151,32 @@ const Home = () => {
         >
           <StudyingDetails>
             <StudyingDetailsElement>
-              W naszej szkole masz wybór różnych trybów nauki:
+              W Gawędówce mamy do zaoferowania trzy rodzaje noclegów:
             </StudyingDetailsElement>
             <StudyingDetailsElement>
-              <GroupsIcon /> W ramach zajęć grupowych
+              <GroupsIcon />
+              5-osobowe studio z własną kuchnią.
             </StudyingDetailsElement>
             <StudyingDetailsElement>
-              <PersonIcon /> W ramach zajęć indywidualnych
-            </StudyingDetailsElement>
-
-            <StudyingDetailsElement>
-              <LaptopMacIcon /> Z domu, na zajęciach online
+              <PersonIcon /> 3-osobowe pokoje na piętrze, z kuchnią na dwa
+              pokoje.
             </StudyingDetailsElement>
             <StudyingDetailsElement>
-              <HomeIcon /> W naszej szkole, na zajęciach stacjonarnych
+              <HomeIcon /> Osobny domek góralski 4-osobowy.
             </StudyingDetailsElement>
           </StudyingDetails>
           <StyledEiffel
-            src={Eiffel}
+            src={trojka}
+            alt="book-eiffel"
+            // max-height="350"
+          ></StyledEiffel>
+          <StyledEiffel
+            src={trojka2}
+            alt="book-eiffel"
+            // max-height="350"
+          ></StyledEiffel>
+          <StyledEiffel
+            src={studio}
             alt="book-eiffel"
             // max-height="350"
           ></StyledEiffel>

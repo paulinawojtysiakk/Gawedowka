@@ -5,18 +5,17 @@ import Link from "next/link";
 import styled from "styled-components";
 import ButtonText from "src/components/atoms/Button";
 import Image from "next/image";
-import Logo from "public/images/images.png";
+import Parzenica from "public/images/parzenica.jpg";
 
 const Wrapper = styled.div`
   margin-bottom: 180px;
 `;
 
 const NavBarContainer = styled.div`
-  background-color: #fffff9;
-  color: var(--basic-text-color);
-  text-transform: uppercase;
+  background-color: rgb(255, 255, 255);
+  color: var(--basic-brown);
   font-weight: 500;
-  padding: 10px;
+  padding: 5px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +30,11 @@ const NavLogo = styled.div`
   align-items: center;
   list-style: none;
 `;
+const LogoName = styled.p`
+  color: var(--basic-brown);
+  font-family: Pinyon Script;
+  font-size: 40px;
+`;
 const NavList = styled.ul`
   list-style: none;
   display: flex;
@@ -38,9 +42,10 @@ const NavList = styled.ul`
   align-items: center;
   flex-wrap: wrap;
   margin: 0 20px;
+  text-transform: uppercase;
 `;
 const NavElement = styled.li`
-  margin: 0 20px;
+  margin: 0 10px;
   &:hover {
     color: #53a8b6;
     text-decoration: underline;
@@ -63,38 +68,21 @@ const NavBar = () => {
         <NavLogo>
           <NavElement>
             <Link href="/">
-              <Image src={Logo} alt="Logo" height={100} priority="false" />
+              <Image
+                src={Parzenica}
+                alt="Parzenica"
+                height={100}
+                priority="false"
+              />
             </Link>
           </NavElement>
-          <Link href="/student/course">
-            <CourseSignup variant="contained" text="Kursy stacjonarne" />
-          </Link>
+          <LogoName>Gawędówka</LogoName>
         </NavLogo>
         <div>
           <NavList>
             <NavElement>
-              <Link href="/pages/about">O nas</Link>
-            </NavElement>
-            <NavElement>
-              <Link href="/pages/courses">Kursy online</Link>
-            </NavElement>
-            <NavElement>
               <Link href="/pages/contact">Kontakt</Link>
             </NavElement>
-            {/* <NavElement>
-              <Link href="/student/profile">Mój profil</Link>
-            </NavElement>
-
-            <SignupButton
-              variant="contained"
-              text="Logowanie"
-              href="/pages/login"
-            ></SignupButton>
-            <SignupButton
-              variant="contained"
-              text="Rejestracja"
-              href="/pages/registration"
-            ></SignupButton> */}
           </NavList>
         </div>
       </NavBarContainer>

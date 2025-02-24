@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Pinyon+Script&display=swap');
+
 :root {
   /* --max-width: 1180px; */
   --border-radius: 12px;
@@ -7,7 +9,7 @@
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --basic-text-color: rgba(3, 37, 70, 0.925);
-  
+  --basic-brown:  rgb(109, 70, 19);
 }
 
 * {
