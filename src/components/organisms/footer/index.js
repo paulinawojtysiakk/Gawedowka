@@ -4,12 +4,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import Logo from "public/images/images.png";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import Parzenica from "public/images/parzenica.jpg";
 
 const FooterContainer = styled.div`
-  background-color: #fffff9;
-  color: var(--basic-text-color);
+  background-color:rgb(255, 255, 255);
+  color: var(--dark-brown);
   border: 1px solid cream;
   border-radius: 5px
   width: 100%;
@@ -44,51 +43,23 @@ const Footer = () => {
   return (
     <FooterContainer>
       <LogoContainer>
-        <Image src={Logo} alt="Logo" height={100} priority="false" />
+        <Image src={Parzenica} alt="Parzenica" height={100} priority="false" />
       </LogoContainer>
       <TextContainer>
         <FooterColumn>
-          <b>Prawne</b>
-          <FooterElement>
-            <Link href="/legal/Regulamin.pdf" target="_blank">
-              Regulamin
-            </Link>
-          </FooterElement>
-          <FooterElement>Dla nauczyciela</FooterElement>
-        </FooterColumn>
-
-        {/* <FooterColumn>
-          <b>Linki</b>
-          <FooterElement>
-            <Link href="/pages/registration">Rejestracja</Link>
-          </FooterElement>
-          <FooterElement>
-            <Link href="/pages/login"> Logowanie</Link>
-          </FooterElement>
-        </FooterColumn> */}
-        <FooterColumn>
-          <b>Napisz do nas</b>
-          <FooterElement>
-            <Link href="/pages/contact">Contact@learnfrench.pl</Link>
-          </FooterElement>
-          <FooterElement>
-            <FacebookIcon />
-
-            <Link
-              href="https://www.facebook.com/learn.french.school/"
-              target="_blank"
-            >
-              Facebook{" "}
-            </Link>
-          </FooterElement>
-        </FooterColumn>
-        <FooterColumn>
           <b>Kontakt</b>
+          <FooterElement>+48 780 433 244</FooterElement>
+
           <FooterElement>
-            +48 507 888 201 <br />
-            ul. Żelazna 59 <br />
-            Warszawa <br />
-            00-802
+            <p>apartamentygawedowka@gmail.com</p>
+          </FooterElement>
+        </FooterColumn>
+        <FooterColumn>
+          <b>Adres</b>
+          <FooterElement>
+            ul. Palenicka 22 <br />
+            34-450, Grywałd <br />
+            Krościenko nad Dunajcem
           </FooterElement>
         </FooterColumn>
       </TextContainer>

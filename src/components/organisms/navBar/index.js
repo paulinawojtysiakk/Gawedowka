@@ -3,12 +3,11 @@ import "src/app/globals.css";
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import ButtonText from "src/components/atoms/Button";
 import Image from "next/image";
 import Parzenica from "public/images/parzenica.jpg";
 
 const Wrapper = styled.div`
-  margin-bottom: 180px;
+  margin-bottom: 115px;
 `;
 
 const NavBarContainer = styled.div`
@@ -35,30 +34,9 @@ const LogoName = styled.p`
   font-family: Pinyon Script;
   font-size: 40px;
 `;
-const NavList = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 20px;
-  text-transform: uppercase;
-`;
-const NavElement = styled.li`
+
+const NavElement = styled.p`
   margin: 0 10px;
-  &:hover {
-    color: #53a8b6;
-    text-decoration: underline;
-    text-underline-offset: 8px;
-  }
-`;
-const SignupButton = styled(ButtonText)`
-  margin-left: 10px;
-  background-color: #5072a7;
-`;
-const CourseSignup = styled(ButtonText)`
-  margin-right: 40px;
-  background-color: #5072a7;
 `;
 
 const NavBar = () => {
@@ -76,15 +54,10 @@ const NavBar = () => {
               />
             </Link>
           </NavElement>
-          <LogoName>Gawędówka</LogoName>
+          <Link href="/">
+            <LogoName>Gawędówka</LogoName>
+          </Link>
         </NavLogo>
-        <div>
-          <NavList>
-            <NavElement>
-              <Link href="/pages/contact">Kontakt</Link>
-            </NavElement>
-          </NavList>
-        </div>
       </NavBarContainer>
     </Wrapper>
   );

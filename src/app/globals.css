@@ -10,6 +10,7 @@
 
   --basic-text-color: rgba(3, 37, 70, 0.925);
   --basic-brown:  rgb(109, 70, 19);
+  --dark-brown: rgb(62, 39, 9);
 }
 
 * {

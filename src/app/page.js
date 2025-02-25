@@ -7,20 +7,38 @@ import Image from "next/image";
 import NavBar from "src/components/organisms/navBar";
 import Footer from "src/components/organisms/footer";
 import { motion } from "framer-motion";
-
-import Bonjour from "public/images/bonjour.jpeg";
-import Eiffel from "public/images/book-eiffel.png";
+import { Typography } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import GawedowkaDom from "public/images/Gawedowka-dom.JPG";
 import trojka from "public/images/trojka-1.JPEG";
 import trojka2 from "public/images/trojka-2.JPEG";
 import studio from "public/images/studio.JPEG";
+import mapa from "public/images/map.png";
+
+const FollowUsCont = styled.div`
+  width: 100%;
+  color: white;
+  background-color: var(--basic-brown);
+  margin-bottom: 60px;
+  padding: 5px 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+`;
 
 const Wrapper = styled.div`
-  color: var(--basic-text-color);
+  color: var(--dark-brown);
 `;
 const IntroContainer = motion.create(styled.div`
   display: flex;
@@ -47,7 +65,7 @@ const IntroContainer = motion.create(styled.div`
 
 const Introduction = styled.div`
   margin: 50px 20px;
-  max-width: 600px;
+  max-width: 550px;
   text-align: justify;
   line-height: 2;
 
@@ -62,7 +80,7 @@ const StudyingContainer = motion.create(styled.div`
   align-items: center;
   margin: 90px 20px;
   gap: 10px;
-  color: var(--basic-text-color);
+  color: var(--dark-brown);
 
   @media (max-width: 768px) {
     display: flex;
@@ -94,7 +112,7 @@ const StudyingDetailsElement = styled.p`
   align-items: center;
   gap: 10px;
 `;
-const StyledEiffel = styled(Image)`
+const StyledPhoto = styled(Image)`
   width: 100%;
   max-width: 100vw;
   border-radius: 5px;
@@ -111,10 +129,46 @@ const StyledEiffel = styled(Image)`
   }
 `;
 
+const MapContainer = styled.div`
+  max-width: 700px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const Map = styled(Image)`
+  width: 100%;
+  max-width: 100vw;
+  border-radius: 5px;
+  object-fit: contain;
+`;
+
 const Home = () => {
   return (
     <div className={styles.wrapper}>
       <NavBar />
+      <FollowUsCont>
+        <Typography style={{ fontSize: "13px" }}>
+          Zadzwoń do nas: 780 433 244
+        </Typography>
+        <Typography
+          style={{
+            fontSize: "13px",
+            display: "flex",
+            alignItems: "center",
+            gap: "4px",
+          }}
+        >
+          Zaobserwuj nas!
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <InstagramIcon />
+          </a>
+        </Typography>
+      </FollowUsCont>
       <Wrapper className={styles.main}>
         <IntroContainer
           initial={{ opacity: 0, y: 50 }}
@@ -134,10 +188,12 @@ const Home = () => {
           <Introduction className={styles.mainIntroText}>
             <h1>Apartamenty w Gawędówce</h1>
             <p>
-              Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem. Z
-              tyłu domu jest ogród z ławkami, miejscem do grilla oraz
-              trampoliną. Zaraz obok znajduje się Banderoza, która jest altaną z
-              pięknymi dawnymi rzeczami rzemiślniczymi.
+              Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem.{" "}
+              <br />
+              Z tyłu domu jest ogród z ławkami, miejscem do grilla oraz
+              trampoliną. <br />
+              Zaraz obok znajduje się Banderoza, która jest altaną z pięknymi
+              dawnymi rzeczami rzemiślniczymi.
               <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
               szlaki górskie, takie jak Sokolica oraz Trzy Korony.
             </p>
@@ -165,23 +221,17 @@ const Home = () => {
               <HomeIcon /> Osobny domek góralski 4-osobowy.
             </StudyingDetailsElement>
           </StudyingDetails>
-          <StyledEiffel
-            src={trojka}
-            alt="book-eiffel"
-            // max-height="350"
-          ></StyledEiffel>
-          <StyledEiffel
-            src={trojka2}
-            alt="book-eiffel"
-            // max-height="350"
-          ></StyledEiffel>
-          <StyledEiffel
-            src={studio}
-            alt="book-eiffel"
-            // max-height="350"
-          ></StyledEiffel>
+          <StyledPhoto src={trojka} alt="book-eiffel"></StyledPhoto>
+          <StyledPhoto src={trojka2} alt="book-eiffel"></StyledPhoto>
+          <StyledPhoto src={studio} alt="book-eiffel"></StyledPhoto>
         </StudyingContainer>
+
+        <MapContainer>
+          <Typography>Gdzie znajduje się Gawędówka</Typography>
+          <Map src={mapa} alt="mapa"></Map>
+        </MapContainer>
       </Wrapper>
+
       <Footer />
     </div>
   );
