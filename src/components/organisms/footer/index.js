@@ -17,6 +17,7 @@ const FooterContainer = styled.div`
   padding: 30px;
   margin-top: auto;
  display: flex;
+ flex-wrap: wrap;
  justify-content: space-between;
 `;
 const LogoContainer = styled.div`
@@ -26,16 +27,29 @@ const TextContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @media (max-width: 769px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 `;
 
 const FooterColumn = styled.ul`
-  padding: 0 80px;
+  margin-top: 10px;
+  padding: 0 20px;
+
+  @media (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
 `;
 
 const FooterElement = styled.li`
   display: flex;
   align-items: center;
-  gap: 5px;
   padding: 10px 0;
   list-style: none;
 `;
