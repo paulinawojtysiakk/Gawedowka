@@ -22,6 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-grid-gallery": "^1.0.1",
+    "react-photo-album": "^3.0.2",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.20.1",
     "styled-components": "^6.1.1"

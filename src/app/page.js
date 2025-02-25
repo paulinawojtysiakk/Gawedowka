@@ -17,6 +17,7 @@ import trojka from "public/images/trojka-1.JPEG";
 import trojka2 from "public/images/trojka-2.JPEG";
 import studio from "public/images/studio.JPEG";
 import mapa from "public/images/map.png";
+import PhotoGallery from "@/components/organisms/photoGallery";
 
 const FollowUsCont = styled.div`
   width: 100%;
@@ -190,8 +191,8 @@ const Home = () => {
             <p>
               Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem.{" "}
               <br />
-              Z tyłu domu jest ogród z ławkami, miejscem do grilla oraz
-              trampoliną. <br />
+              Z tyłu domu jest ogród z ławkami, miejscem do grilla, huśtawkami
+              oraz trampoliną. <br />
               Zaraz obok znajduje się Banderoza, która jest altaną z pięknymi
               dawnymi rzeczami rzemiślniczymi.
               <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
@@ -225,6 +226,8 @@ const Home = () => {
           <StyledPhoto src={trojka2} alt="book-eiffel"></StyledPhoto>
           <StyledPhoto src={studio} alt="book-eiffel"></StyledPhoto>
         </StudyingContainer>
+
+        <PhotoGallery></PhotoGallery>
 
         <MapContainer>
           <Typography>Gdzie znajduje się Gawędówka</Typography>
