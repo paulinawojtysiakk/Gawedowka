@@ -65,7 +65,7 @@ const IntroContainer = motion.create(styled.div`
 `);
 
 const Introduction = styled.div`
-  margin: 50px 20px;
+  margin: 40px 20px;
   max-width: 550px;
   text-align: justify;
   line-height: 2;
@@ -79,7 +79,7 @@ const StudyingContainer = motion.create(styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 90px 20px;
+  margin: 50px 20px;
   gap: 10px;
   color: var(--dark-brown);
 
@@ -149,7 +149,7 @@ const Home = () => {
     <div className={styles.wrapper}>
       <NavBar />
       <FollowUsCont>
-        <Typography style={{ fontSize: "13px" }}>
+        <Typography style={{ fontSize: "13px", paddingRight: "5px" }}>
           Zadzwoń do nas: 780 433 244
         </Typography>
         <Typography
@@ -222,9 +222,9 @@ const Home = () => {
               <HomeIcon /> Osobny domek góralski 4-osobowy.
             </StudyingDetailsElement>
           </StudyingDetails>
-          <StyledPhoto src={trojka} alt="book-eiffel"></StyledPhoto>
+          {/* <StyledPhoto src={trojka} alt="book-eiffel"></StyledPhoto>
           <StyledPhoto src={trojka2} alt="book-eiffel"></StyledPhoto>
-          <StyledPhoto src={studio} alt="book-eiffel"></StyledPhoto>
+          <StyledPhoto src={studio} alt="book-eiffel"></StyledPhoto> */}
         </StudyingContainer>
 
         <PhotoGallery></PhotoGallery>
