@@ -114,6 +114,7 @@ const StudyingDetailsElement = styled.p`
   display: flex;
   align-items: center;
   gap: 10px;
+  text-align: center;
 `;
 const StyledPhoto = styled(Image)`
   width: 100%;
@@ -210,7 +211,7 @@ const Home = () => {
           transition={{ duration: 1.2 }}
         >
           <StudyingDetails>
-            <StudyingDetailsElement>
+            <StudyingDetailsElement style={{ lineHeight: "30px" }}>
               W Gawędówce mamy Państwu do zaoferowania trzy rodzaje noclegów:
             </StudyingDetailsElement>
             <StudyingDetailsElement>
@@ -237,7 +238,14 @@ const Home = () => {
           <Typography style={{ fontStyle: "italic", fontSize: "23px" }}>
             Gdzie znajduje się Gawędówka
           </Typography>
-          <Typography style={{ fontStyle: "italic", paddingTop: "10px" }}>
+          <Typography
+            style={{
+              fontStyle: "italic",
+              paddingTop: "10px",
+              textAlign: "center",
+              padding: "8px",
+            }}
+          >
             ul. Palenicka 22, 34-450 Grywałd, Krościenko nad Dunajcem
           </Typography>
           <Map src={mapa} alt="mapa"></Map>

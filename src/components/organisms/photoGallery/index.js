@@ -19,6 +19,7 @@ const PhotoContainer = styled.div`
   gap: 10px;
   max-width: 1100px;
   margin-bottom: 60px;
+  padding: 10px;
 `;
 
 const StyledImg = styled.img`
