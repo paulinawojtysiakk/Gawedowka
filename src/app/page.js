@@ -14,10 +14,11 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import GawedowkaDom from "public/images/Gawedowka-dom.JPG";
 import trojka from "public/images/trojka-1.JPEG";
-import trojka2 from "public/images/trojka-2.JPEG";
+import domek2 from "public/images/domek2.jpg";
 import studio from "public/images/studio.JPEG";
 import mapa from "public/images/map.png";
-import PhotoGallery from "@/components/organisms/photoGallery";
+import PhotoGallery from "src/components/organisms/photoGallery";
+import Pricing from "src/components/organisms/pricing";
 
 const FollowUsCont = styled.div`
   width: 100%;
@@ -79,7 +80,7 @@ const StudyingContainer = motion.create(styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 50px 20px;
+  margin: 30px 20px 60px 20px;
   gap: 10px;
   color: var(--dark-brown);
 
@@ -106,6 +107,7 @@ const StudyingDetails = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 `;
 const StudyingDetailsElement = styled.p`
@@ -120,7 +122,7 @@ const StyledPhoto = styled(Image)`
 
   @media (min-width: 769px) {
     width: auto;
-    max-height: 350px;
+    max-height: 250px;
   }
 
   @media (max-width: 768px) {
@@ -136,11 +138,12 @@ const MapContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 `;
 const Map = styled(Image)`
   width: 100%;
   max-width: 100vw;
-  border-radius: 5px;
+  border-radius: 10px;
   object-fit: contain;
 `;
 
@@ -191,10 +194,10 @@ const Home = () => {
             <p>
               Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem.{" "}
               <br />
-              Z tyłu domu jest ogród z ławkami, miejscem do grilla, huśtawkami
-              oraz trampoliną. <br />
-              Zaraz obok znajduje się Banderoza, która jest altaną z pięknymi
-              dawnymi rzeczami rzemiślniczymi.
+              Z tyłu domu jest ogród ze strumykiem, miejscem do grilla,
+              huśtawkami oraz trampoliną. <br />
+              Zaraz obok znajduje się Banderoza, która jest altaną z rzeczami
+              starych górali kolekcjonowanymi przez lata.
               <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
               szlaki górskie, takie jak Sokolica oraz Trzy Korony.
             </p>
@@ -208,29 +211,35 @@ const Home = () => {
         >
           <StudyingDetails>
             <StudyingDetailsElement>
-              W Gawędówce mamy do zaoferowania trzy rodzaje noclegów:
+              W Gawędówce mamy Państwu do zaoferowania trzy rodzaje noclegów:
             </StudyingDetailsElement>
             <StudyingDetailsElement>
               <GroupsIcon />
               5-osobowe studio z własną kuchnią.
+              {/* <StyledPhoto src={studio} alt="pokój"></StyledPhoto> */}
             </StudyingDetailsElement>
             <StudyingDetailsElement>
               <PersonIcon /> 3-osobowe pokoje na piętrze, z kuchnią na dwa
               pokoje.
+              {/* <StyledPhoto src={trojka} alt="pokój"></StyledPhoto> */}
             </StudyingDetailsElement>
             <StudyingDetailsElement>
               <HomeIcon /> Osobny domek góralski 4-osobowy.
+              {/* <StyledPhoto src={domek2} alt="pokój"></StyledPhoto> */}
             </StudyingDetailsElement>
           </StudyingDetails>
-          {/* <StyledPhoto src={trojka} alt="book-eiffel"></StyledPhoto>
-          <StyledPhoto src={trojka2} alt="book-eiffel"></StyledPhoto>
-          <StyledPhoto src={studio} alt="book-eiffel"></StyledPhoto> */}
         </StudyingContainer>
+        <Pricing></Pricing>
 
         <PhotoGallery></PhotoGallery>
 
         <MapContainer>
-          <Typography>Gdzie znajduje się Gawędówka</Typography>
+          <Typography style={{ fontStyle: "italic", fontSize: "23px" }}>
+            Gdzie znajduje się Gawędówka
+          </Typography>
+          <Typography style={{ fontStyle: "italic", paddingTop: "10px" }}>
+            ul. Palenicka 22, 34-450 Grywałd, Krościenko nad Dunajcem
+          </Typography>
           <Map src={mapa} alt="mapa"></Map>
         </MapContainer>
       </Wrapper>
