@@ -151,7 +151,7 @@ const Home = () => {
       <NavBar />
       <FollowUsCont>
         <Typography style={{ fontSize: "13px", paddingRight: "5px" }}>
-          Zadzwoń do nas: 780 433 244
+          Zadzwoń do nas: <b>780 433 244</b>
         </Typography>
         <Typography
           style={{
@@ -189,16 +189,17 @@ const Home = () => {
           ></Image>
           <Introduction className={styles.mainIntroText}>
             <h1>Apartamenty w Gawędówce</h1>
-            <p>
-              Zapraszamy do góralskiej Gawędówki w Krościenku nad Dunajcem.{" "}
+            <p style={{ margin: "10px 0 20px 0" }}>
+              Zapraszamy do Gawędówki położonej nad górskim potokiem w sercu
+              Pienin. Z ogrodu widoczne jest pasmo Pienin wraz z Trzema
+              Koronami. Poza przestronnymi apartamentami na terenie obiektu
+              znajduje się duży ogród z miejscami do grilla oraz altana
+              wypełniona starymi pamiątkami po góralach pienińskich, w której
+              przy ognisku można spędzić wieczór. Dodatkowo znajduje się również
+              plac zabaw z huśtawkami oraz trampoliną i darmowy parking.
               <br />
-              Z tyłu domu jest ogród ze strumykiem, miejscem do grilla,
-              huśtawkami oraz trampoliną. <br />
-              Zaraz obok znajduje się Banderoza, która jest altaną ze starymi
-              rzeczami górali kolekcjonowanymi przez lata.
-              <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
-              szlaki górskie, takie jak Sokolica oraz Trzy Korony.
             </p>
+            Kontakt pod numerem: <b>780 433 244</b>
           </Introduction>
         </IntroContainer>
 
