@@ -2,9 +2,49 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const images = [
-  { img: "images/trojka-1.JPEG", title: "pokój" },
-  { img: "images/trojka-2.JPEG", title: "pokój" },
-  { img: "images/studio.JPEG", title: "pokój" },
+  { img: "images/studio-droga-sypialnia1.JPEG", title: "pokój" },
+  { img: "images/studio-droga-sypialnia.JPEG", title: "pokój" },
+  { img: "images/studio-droga-sypialnia3.JPEG", title: "pokój" },
+
+  { img: "images/studio-droga-kuchnia.JPEG", title: "pokój" },
+  { img: "images/studio-kuchnia.JPEG", title: "pokój" },
+
+  { img: "images/studio-droga1.JPEG", title: "pokój" },
+  { img: "images/studio-droga2.JPEG", title: "pokój" },
+  { img: "images/studio-droga3.JPEG", title: "pokój" },
+  { img: "images/studio-droga4.JPEG", title: "pokój" },
+
+  { img: "images/studio-łazienka.JPEG", title: "pokój" },
+  { img: "images/studio-lazienka2.JPEG", title: "pokój" },
+
+  { img: "images/studio-rzeka-sypialnia.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka-sypialnia2.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka-sypialnia4.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka-sypialnia3.JPEG", title: "pokój" },
+
+  { img: "images/studio-rzeka-kuchnia.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka-kuchnia2.JPEG", title: "pokój" },
+
+  { img: "images/studio-rzeka.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka2.JPEG", title: "pokój" },
+  { img: "images/studio-rzeka3.JPEG", title: "pokój" },
+
+  { img: "images/korytarz.JPEG", title: "pokój" },
+  { img: "images/kuchnia1.JPEG", title: "pokój" },
+  { img: "images/kuchnia.JPEG", title: "pokój" },
+  { img: "images/kuchnia2.JPEG", title: "pokój" },
+  { img: "images/kuchnia3.JPEG", title: "pokój" },
+
+  { img: "images/trojka-droga.JPEG", title: "pokój" },
+  { img: "images/trojka-droga3.JPEG", title: "pokój" },
+  { img: "images/trojka-droga2.JPEG", title: "pokój" },
+  { img: "images/trojka-droga4.JPEG", title: "pokój" },
+
+  { img: "images/trojka-kuchnia.JPEG", title: "pokój" },
+  { img: "images/trojka-lazienka.JPEG", title: "pokój" },
+
+  { img: "images/trojka-rzeka.JPEG", title: "pokój" },
+  { img: "images/trojka-rzeka3.JPEG", title: "pokój" },
   { img: "images/banderoza-wew.jpg", title: "pokój" },
   { img: "images/ogrod.jpg", title: "pokój" },
   { img: "images/banderoza2.jpg", title: "pokój" },

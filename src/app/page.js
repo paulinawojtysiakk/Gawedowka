@@ -13,9 +13,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import GawedowkaDom from "public/images/Gawedowka-dom.JPG";
-import trojka from "public/images/trojka-1.JPEG";
-import domek2 from "public/images/domek2.jpg";
-import studio from "public/images/studio.JPEG";
 import mapa from "public/images/map.png";
 import PhotoGallery from "src/components/organisms/photoGallery";
 import Pricing from "src/components/organisms/pricing";
@@ -197,8 +194,8 @@ const Home = () => {
               <br />
               Z tyłu domu jest ogród ze strumykiem, miejscem do grilla,
               huśtawkami oraz trampoliną. <br />
-              Zaraz obok znajduje się Banderoza, która jest altaną z rzeczami
-              starych górali kolekcjonowanymi przez lata.
+              Zaraz obok znajduje się Banderoza, która jest altaną ze starymi
+              rzeczami górali kolekcjonowanymi przez lata.
               <br />W Krościenku, sercu Pienin, mozna wybrać się na piękne
               szlaki górskie, takie jak Sokolica oraz Trzy Korony.
             </p>

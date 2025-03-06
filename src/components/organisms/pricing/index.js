@@ -45,7 +45,7 @@ const Pricing = () => {
       <PricingList>
         <DescCont>
           <Description>3-osobowy pokój</Description>
-          <Description>190zł</Description>
+          <Description>200zł</Description>
         </DescCont>
         <Divider></Divider>
         <DescCont>
@@ -55,7 +55,7 @@ const Pricing = () => {
         <Divider></Divider>
         <DescCont>
           <Description>4-osobowy domek</Description>
-          <Description>190zł</Description>
+          <Description>200zł</Description>
         </DescCont>
         <Divider></Divider>
       </PricingList>
