@@ -39,7 +39,6 @@ export const metadata = {
 
 import dynamic from "next/dynamic";
 
-// Dynamically import your client component (no SSR)
 const HomeClient = dynamic(() => import("./HomeClient"), { ssr: false });
 import Head from "next/head";
 

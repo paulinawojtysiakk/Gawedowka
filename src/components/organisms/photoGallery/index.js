@@ -10,15 +10,10 @@ const images = [
   { img: "images/studio-kuchnia.JPEG", title: "pokój" },
 
   { img: "images/studio-droga1.JPEG", title: "pokój" },
-  { img: "images/studio-droga2.JPEG", title: "pokój" },
   { img: "images/studio-droga3.JPEG", title: "pokój" },
   { img: "images/studio-droga4.JPEG", title: "pokój" },
 
-  { img: "images/studio-łazienka.JPEG", title: "pokój" },
-  { img: "images/studio-lazienka2.JPEG", title: "pokój" },
-
   { img: "images/studio-rzeka-sypialnia.JPEG", title: "pokój" },
-  { img: "images/studio-rzeka-sypialnia2.JPEG", title: "pokój" },
   { img: "images/studio-rzeka-sypialnia4.JPEG", title: "pokój" },
   { img: "images/studio-rzeka-sypialnia3.JPEG", title: "pokój" },
 
@@ -41,16 +36,15 @@ const images = [
   { img: "images/trojka-droga4.JPEG", title: "pokój" },
 
   { img: "images/trojka-kuchnia.JPEG", title: "pokój" },
-  { img: "images/trojka-lazienka.JPEG", title: "pokój" },
 
   { img: "images/trojka-rzeka.JPEG", title: "pokój" },
   { img: "images/trojka-rzeka3.JPEG", title: "pokój" },
   { img: "images/banderoza-wew.jpg", title: "pokój" },
   { img: "images/ogrod.jpg", title: "pokój" },
   { img: "images/banderoza2.jpg", title: "pokój" },
-  { img: "images/domek2.jpg", title: "pokój" },
-  { img: "images/banderoza.jpg", title: "pokój" },
-  { img: "images/strumyk.jpg", title: "pokój" },
+  { img: "images/domek-front.JPEG", title: "pokój" },
+  { img: "images/ogrod-1.JPEG", title: "pokój" },
+
 ];
 
 const PhotoContainer = styled.div`
